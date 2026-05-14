@@ -1,12 +1,12 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import { PHOTO } from "../lib/images";
+import { PHOTO, publicUrl } from "../lib/images";
 import { FactoryImg } from "./FactoryImg";
 
 function heroVideoSrc(): string | undefined {
   const env = import.meta.env.VITE_HERO_VIDEO_URL;
   if (env) return env;
-  return "/media/hero.mp4";
+  return publicUrl("media/hero.mp4");
 }
 
 export function Hero() {

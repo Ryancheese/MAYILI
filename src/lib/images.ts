@@ -1,20 +1,29 @@
-/** Local paths under `public/assets/photos/`. Fallbacks when files are missing in dev. */
+/**
+ * Files under `public/` (e.g. `public/assets/photos/...`).
+ * Must use Vite `BASE_URL` so GitHub Pages project sites resolve correctly (`/repo-name/...`).
+ */
+export function publicUrl(path: string): string {
+  const base = import.meta.env.BASE_URL;
+  const normalized = path.replace(/^\/+/, "");
+  return `${base}${normalized}`;
+}
+
 export const PHOTO = {
-  hero: "/assets/photos/hero-factory.jpg",
-  meeting: "/assets/photos/meeting-workshop.jpg",
-  cutting: "/assets/photos/cutting-room.jpg",
-  fabric: "/assets/photos/fabric-prep.jpg",
-  juki: "/assets/photos/equipment-juki.jpg",
-  flatlock: "/assets/photos/equipment-flatlock.jpg",
-  detail: "/assets/photos/equipment-detail.jpg",
-  line: "/assets/photos/equipment-line.jpg",
-  entrance: "/assets/photos/entrance.jpg",
-  signage: "/assets/photos/signage.jpg",
-  sewing: "/assets/photos/sewing-floor.jpg",
-  showroomWide: "/assets/photos/showroom-wide.jpg",
-  showroomRacks: "/assets/photos/showroom-racks.jpg",
-  office: "/assets/photos/office.jpg",
-  corridor: "/assets/photos/corridor.jpg",
+  hero: publicUrl("assets/photos/hero-factory.jpg"),
+  meeting: publicUrl("assets/photos/meeting-workshop.jpg"),
+  cutting: publicUrl("assets/photos/cutting-room.jpg"),
+  fabric: publicUrl("assets/photos/fabric-prep.jpg"),
+  juki: publicUrl("assets/photos/equipment-juki.jpg"),
+  flatlock: publicUrl("assets/photos/equipment-flatlock.jpg"),
+  detail: publicUrl("assets/photos/equipment-detail.jpg"),
+  line: publicUrl("assets/photos/equipment-line.jpg"),
+  entrance: publicUrl("assets/photos/entrance.jpg"),
+  signage: publicUrl("assets/photos/signage.jpg"),
+  sewing: publicUrl("assets/photos/sewing-floor.jpg"),
+  showroomWide: publicUrl("assets/photos/showroom-wide.jpg"),
+  showroomRacks: publicUrl("assets/photos/showroom-racks.jpg"),
+  office: publicUrl("assets/photos/office.jpg"),
+  corridor: publicUrl("assets/photos/corridor.jpg"),
 } as const;
 
 export const FALLBACK: Record<string, string> = {
@@ -51,10 +60,10 @@ export const FALLBACK: Record<string, string> = {
 };
 
 export const CATEGORY = {
-  gym: "/assets/categories/gym.jpg",
-  running: "/assets/categories/running.jpg",
-  yoga: "/assets/categories/yoga.jpg",
-  casual: "/assets/categories/casual.jpg",
+  gym: publicUrl("assets/categories/gym.jpg"),
+  running: publicUrl("assets/categories/running.jpg"),
+  yoga: publicUrl("assets/categories/yoga.jpg"),
+  casual: publicUrl("assets/categories/casual.jpg"),
 } as const;
 
 export const CATEGORY_FALLBACK = {
