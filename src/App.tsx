@@ -7,6 +7,17 @@ import { MotionShowcase } from "./components/MotionShowcase";
 import { TechLanguage } from "./components/TechLanguage";
 import { FounderStory } from "./components/FounderStory";
 import { SiteBody } from "./components/SiteBody";
+import { useI18n } from "./i18n/context";
+
+function Footer() {
+  const { t } = useI18n();
+  return (
+    <footer className="site-footer">
+      <span>{t("footer.copy")}</span>
+      <a href="#home">{t("footer.top")}</a>
+    </footer>
+  );
+}
 
 export default function App() {
   return (
@@ -22,10 +33,7 @@ export default function App() {
         <FounderStory />
         <SiteBody />
       </main>
-      <footer className="site-footer">
-        <span>© 2026 Mayili Clothing Trade. All rights reserved.</span>
-        <a href="#home">返回顶部</a>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -1,34 +1,33 @@
 import { FactoryImg } from "./FactoryImg";
 import { CATEGORY } from "../lib/images";
+import { useI18n } from "../i18n/context";
 import { Reveal } from "./Reveal";
 
-const categories = [
-  { key: "gym" as const, title: "Gym", zh: "健身训练", src: CATEGORY.gym },
-  { key: "running" as const, title: "Running", zh: "跑步", src: CATEGORY.running },
-  { key: "yoga" as const, title: "Yoga", zh: "瑜伽", src: CATEGORY.yoga },
-  { key: "casual" as const, title: "Casual", zh: "运动休闲", src: CATEGORY.casual },
-];
+const categoryKeys = ["gym", "running", "yoga", "casual"] as const;
 
 export function Categories() {
+  const { t } = useI18n();
+
   return (
     <section className="categories section" id="categories">
       <div className="section-heading">
-        <p className="eyebrow">Product focus</p>
-        <h2>Buyers see the lane instantly — no guessing</h2>
-        <p className="section-lede">
-          用清晰的品类视觉语言，让美国 DTC 买手在 3 秒内判断：这是不是我要找的供应商。
-        </p>
+        <p className="eyebrow">{t("cat.eyebrow")}</p>
+        <h2>{t("cat.title")}</h2>
+        <p className="section-lede">{t("cat.lede")}</p>
       </div>
       <div className="category-grid">
-        {categories.map((c, i) => (
-          <Reveal key={c.key} delay={i * 0.05}>
+        {categoryKeys.map((key, i) => (
+          <Reveal key={key} delay={i * 0.05}>
             <article className="category-card">
               <div className="category-media">
-                <FactoryImg src={c.src} alt={`${c.title} apparel`} />
+                <FactoryImg
+                  src={CATEGORY[key]}
+                  alt={`${t(`cat.${key}`)} ${t("cat.imgAlt")}`}
+                />
                 <div className="category-shade" />
                 <div className="category-label">
-                  <strong>{c.title}</strong>
-                  <span>{c.zh}</span>
+                  <strong>{t(`cat.${key}`)}</strong>
+                  <span>{t(`cat.${key}Sub`)}</span>
                 </div>
               </div>
             </article>

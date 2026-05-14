@@ -1,6 +1,7 @@
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
 import { PHOTO } from "../lib/images";
+import { useI18n } from "../i18n/context";
 import { FactoryImg } from "./FactoryImg";
 
 /** Only load hero video when explicitly configured. A missing MP4 often renders as a black plane above the poster image. */
@@ -9,21 +10,14 @@ function heroVideoSrc(): string | undefined {
 }
 
 export function Hero() {
-  const ref = useRef<HTMLElement>(null);
+  const { t } = useI18n();
   const reduce = useReducedMotion();
   const [videoVisible, setVideoVisible] = useState(Boolean(heroVideoSrc()));
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 120]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, reduce ? 1 : 1.08]);
-
   const src = heroVideoSrc();
 
   return (
-    <section className="hero" id="home" ref={ref}>
-      <motion.div className="hero-media" style={{ y, scale }}>
+    <section className="hero" id="home">
+      <div className="hero-media">
         <div className="hero-kenburns" aria-hidden>
           <FactoryImg src={PHOTO.hero} alt="" loading="eager" fetchPriority="high" decoding="async" />
         </div>
@@ -35,7 +29,7 @@ export function Hero() {
             loop
             playsInline
             poster={PHOTO.hero}
-            aria-label="Hero manufacturing video"
+            aria-label={t("hero.videoAria")}
             onError={() => setVideoVisible(false)}
             onLoadedData={(e) => {
               e.currentTarget.classList.add("is-ready");
@@ -46,7 +40,7 @@ export function Hero() {
         ) : null}
         <div className="hero-shade" />
         <div className="hero-grain" aria-hidden />
-      </motion.div>
+      </div>
 
       <div className="hero-content">
         <motion.p
@@ -55,7 +49,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          YOUR PERFORMANCE APPAREL PARTNER
+          {t("hero.eyebrow")}
         </motion.p>
         <motion.h1
           className="hero-title"
@@ -63,7 +57,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
         >
-          上海马亿里服装贸易有限公司
+          {t("hero.title")}
         </motion.h1>
         <motion.p
           className="hero-lede"
@@ -71,8 +65,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         >
-          We help emerging performance brands compete with industry giants — from sketch to shelf, with sampling,
-          low MOQ, and launch timing that U.S. startups actually need.
+          {t("hero.lede")}
         </motion.p>
         <motion.div
           className="hero-hook"
@@ -80,9 +73,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="hook-kicker">From Sketch to Shelf</span>
-          <span className="hook-value">21 Days</span>
-          <span className="hook-note">（视款式与面辅料确认进度而定）</span>
+          <span className="hook-kicker">{t("hero.hookKicker")}</span>
+          <span className="hook-value">{t("hero.hookValue")}</span>
+          <span className="hook-note">{t("hero.hookNote")}</span>
         </motion.div>
         <motion.div
           className="hero-actions"
@@ -91,30 +84,30 @@ export function Hero() {
           transition={{ duration: 0.55, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
         >
           <a className="button primary" href="#contact">
-            Start a project
+            {t("hero.ctaPrimary")}
           </a>
           <a className="button ghost" href="#motion">
-            See how we build
+            {t("hero.ctaSecondary")}
           </a>
         </motion.div>
       </div>
 
-      <div className="hero-metrics" aria-label="Factory highlights">
+      <div className="hero-metrics" aria-label={t("hero.eyebrow")}>
         <article>
           <strong>2088m²</strong>
-          <span>厂房面积</span>
+          <span>{t("hero.m1")}</span>
         </article>
         <article>
           <strong>120+</strong>
-          <span>员工团队</span>
+          <span>{t("hero.m2")}</span>
         </article>
         <article>
           <strong>300k+</strong>
-          <span>年产能力（件）</span>
+          <span>{t("hero.m3")}</span>
         </article>
         <article>
           <strong>120</strong>
-          <span>主要设备</span>
+          <span>{t("hero.m4")}</span>
         </article>
       </div>
     </section>

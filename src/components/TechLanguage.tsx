@@ -1,41 +1,32 @@
 import { Reveal } from "./Reveal";
+import { useI18n } from "../i18n/context";
 
-const terms = [
-  "Flatlock Construction",
-  "4-Way Stretch",
-  "Moisture Wicking",
-  "Bonded Seams",
-  "Anti-Odor Finish",
-  "Reflective Transfer",
-  "Laser Cut Ventilation",
-  "Brushed Back Fleece",
-  "Compression Fit Engineering",
-  "Durable Water Repellent (DWR)",
-];
+const termKeys = ["tech.t0", "tech.t1", "tech.t2", "tech.t3", "tech.t4", "tech.t5", "tech.t6", "tech.t7", "tech.t8", "tech.t9"] as const;
 
 export function TechLanguage() {
+  const { t } = useI18n();
+  const terms = termKeys.map((k) => t(k));
+
   return (
     <section className="tech section" id="tech">
       <div className="section-heading">
-        <p className="eyebrow">Technical storytelling</p>
-        <h2>Speak the buyer&apos;s language — and help SEO understand you</h2>
-        <p className="section-lede">
-          这些关键词不是“堆词”，而是把你们的真实工艺能力翻译成采购与产品团队一眼能懂的语言。
-        </p>
+        <p className="eyebrow">{t("tech.eyebrow")}</p>
+        <h2>{t("tech.title")}</h2>
+        <p className="section-lede">{t("tech.lede")}</p>
       </div>
       <Reveal>
-        <div className="tech-marquee" aria-label="Technical keywords">
+        <div className="tech-marquee" aria-label={t("tech.marqueeAria")}>
           <div className="tech-track">
-            {[...terms, ...terms].map((t, i) => (
-              <span key={`${t}-${i}`} className="tech-pill">
-                {t}
+            {[...terms, ...terms].map((label, i) => (
+              <span key={`${label}-${i}`} className="tech-pill">
+                {label}
               </span>
             ))}
           </div>
         </div>
         <ul className="tech-grid">
-          {terms.map((t) => (
-            <li key={t}>{t}</li>
+          {terms.map((label) => (
+            <li key={label}>{label}</li>
           ))}
         </ul>
       </Reveal>

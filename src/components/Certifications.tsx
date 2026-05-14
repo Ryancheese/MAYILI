@@ -1,29 +1,29 @@
 import { Reveal } from "./Reveal";
+import { useI18n } from "../i18n/context";
 
 const badges = [
-  { code: "ISO 9001", note: "质量管理体系" },
-  { code: "BSCI", note: "社会责任审核" },
-  { code: "WRAP", note: "负责任生产" },
-  { code: "OEKO-TEX", note: "STANDARD 100 纺织品安全" },
-];
+  { code: "ISO 9001", noteKey: "cert.iso" },
+  { code: "BSCI", noteKey: "cert.bsci" },
+  { code: "WRAP", noteKey: "cert.wrap" },
+  { code: "OEKO-TEX", noteKey: "cert.oeko" },
+] as const;
 
 export function Certifications() {
+  const { t } = useI18n();
   return (
-    <section className="certs section-tight" aria-label="Certifications">
+    <section className="certs section-tight" aria-label={t("cert.eyebrow")}>
       <Reveal>
         <div className="certs-inner">
-          <p className="eyebrow certs-eyebrow">Trust signals</p>
+          <p className="eyebrow certs-eyebrow">{t("cert.eyebrow")}</p>
           <ul className="certs-list">
             {badges.map((b) => (
               <li key={b.code}>
                 <span className="certs-code">{b.code}</span>
-                <span className="certs-note">{b.note}</span>
+                <span className="certs-note">{t(b.noteKey)}</span>
               </li>
             ))}
           </ul>
-          <p className="certs-disclaimer">
-            证书与报告编号可在立项后按客户要求提供核验；页面展示为常见采购决策中的信任要素组合。
-          </p>
+          <p className="certs-disclaimer">{t("cert.disclaimer")}</p>
         </div>
       </Reveal>
     </section>
