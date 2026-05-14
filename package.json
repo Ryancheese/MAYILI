@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "check:photos": "node scripts/verify-public-photos.mjs",
+    "photos:fetch": "node scripts/fetch-semantic-photos.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

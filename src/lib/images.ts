@@ -1,28 +1,28 @@
 /**
- * Factory & category images are bundled from `src/assets/**` with `?url`.
- * Vite rewrites URLs for `base` (GitHub Pages), so online paths stay correct.
- * Replace JPEGs in `src/assets/photos/` and `src/assets/categories/` with real shots (keep filenames).
+ * Factory & category images: bundled from `src/assets/**` via `?url`.
+ * In Cursor you can refer to this folder as @assets/photos — same as `src/assets/photos/`.
+ * Run `node scripts/fetch-semantic-photos.mjs` to refresh themed placeholders from Unsplash.
  */
-import casualUrl from "../assets/categories/casual.jpg?url";
-import gymUrl from "../assets/categories/gym.jpg?url";
-import runningUrl from "../assets/categories/running.jpg?url";
-import yogaUrl from "../assets/categories/yoga.jpg?url";
+import casualUrl from "@assets/categories/casual.jpg?url";
+import gymUrl from "@assets/categories/gym.jpg?url";
+import runningUrl from "@assets/categories/running.jpg?url";
+import yogaUrl from "@assets/categories/yoga.jpg?url";
 
-import corridorUrl from "../assets/photos/corridor.jpg?url";
-import cuttingUrl from "../assets/photos/cutting-room.jpg?url";
-import detailUrl from "../assets/photos/equipment-detail.jpg?url";
-import flatlockUrl from "../assets/photos/equipment-flatlock.jpg?url";
-import jukiUrl from "../assets/photos/equipment-juki.jpg?url";
-import lineUrl from "../assets/photos/equipment-line.jpg?url";
-import entranceUrl from "../assets/photos/entrance.jpg?url";
-import fabricUrl from "../assets/photos/fabric-prep.jpg?url";
-import heroUrl from "../assets/photos/hero-factory.jpg?url";
-import meetingUrl from "../assets/photos/meeting-workshop.jpg?url";
-import officeUrl from "../assets/photos/office.jpg?url";
-import sewingUrl from "../assets/photos/sewing-floor.jpg?url";
-import racksUrl from "../assets/photos/showroom-racks.jpg?url";
-import wideUrl from "../assets/photos/showroom-wide.jpg?url";
-import signageUrl from "../assets/photos/signage.jpg?url";
+import corridorUrl from "@assets/photos/corridor.jpg?url";
+import cuttingUrl from "@assets/photos/cutting-room.jpg?url";
+import detailUrl from "@assets/photos/equipment-detail.jpg?url";
+import flatlockUrl from "@assets/photos/equipment-flatlock.jpg?url";
+import jukiUrl from "@assets/photos/equipment-juki.jpg?url";
+import lineUrl from "@assets/photos/equipment-line.jpg?url";
+import entranceUrl from "@assets/photos/entrance.jpg?url";
+import fabricUrl from "@assets/photos/fabric-prep.jpg?url";
+import heroUrl from "@assets/photos/hero-factory.jpg?url";
+import meetingUrl from "@assets/photos/meeting-workshop.jpg?url";
+import officeUrl from "@assets/photos/office.jpg?url";
+import sewingUrl from "@assets/photos/sewing-floor.jpg?url";
+import racksUrl from "@assets/photos/showroom-racks.jpg?url";
+import wideUrl from "@assets/photos/showroom-wide.jpg?url";
+import signageUrl from "@assets/photos/signage.jpg?url";
 
 /** Optional `public/` files (e.g. hero video). Still needs `BASE_URL` when not using bundled assets. */
 export function publicUrl(path: string): string {
@@ -57,7 +57,7 @@ export const FALLBACK: Record<string, string> = {
   [cuttingUrl]:
     "https://images.unsplash.com/photo-1558171813-3c0888c0efb7?auto=format&fit=crop&w=1200&q=80",
   [fabricUrl]:
-    "https://images.unsplash.com/photo-1558171813-3c0888c0efb7?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1620799140408-ed534f99a329?auto=format&fit=crop&w=1200&q=80",
   [jukiUrl]:
     "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=80",
   [flatlockUrl]:

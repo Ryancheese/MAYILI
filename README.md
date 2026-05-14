@@ -38,7 +38,15 @@ If unset, the hero uses the factory image (Ken Burns + parallax) only.
 
 ## Photos（工厂图 — 已改为随构建打包）
 
-图片放在 **`src/assets/photos/`** 与 **`src/assets/categories/`**，在 `src/lib/images.ts` 里用 **`import … from '…?url'`** 引入。Vite 会：
+图片放在 **`src/assets/photos/`** 与 **`src/assets/categories/`**（在 Cursor 里可写 **`@assets/photos/…`**，已配置路径别名）。在 `src/lib/images.ts` 里用 **`import … from '@assets/…?url'`** 引入。
+
+刷新占位图（需已安装 **curl** 且可访问外网）：
+
+```bash
+npm run photos:fetch
+```
+
+Vite 会：
 
 - 把文件输出到 **`dist/assets/`**（带内容哈希的文件名），
 - 在 JS 里写入 **相对路径**（配合 `base: './'`，适配 GitHub Pages 子路径）。
