@@ -1,14 +1,13 @@
 /**
- * Lists required factory photos under public/assets/photos/.
+ * Verifies bundled factory JPEGs exist under src/assets/photos/ (used by Vite ?url imports).
  * Run: npm run check:photos
- * Exits 1 if any file is missing (use before git push / CI).
  */
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const dir = join(root, "public", "assets", "photos");
+const dir = join(root, "src", "assets", "photos");
 
 const REQUIRED = [
   "hero-factory.jpg",
@@ -31,15 +30,10 @@ const REQUIRED = [
 const missing = REQUIRED.filter((name) => !existsSync(join(dir, name)));
 
 if (missing.length) {
-  console.error("\n[photos] 以下文件在 public/assets/photos/ 中不存在或未提交到 Git：");
+  console.error("\n[photos] 缺少 src/assets/photos/ 下的 JPEG（构建会失败）：");
   console.error(missing.map((m) => `  - ${m}`).join("\n"));
-  console.error("\n说明：");
-  console.error("  - Vite 只会打包仓库里的 public/ 文件；GitHub Pages 上若缺少这些 JPG，");
-  console.error("    页面会 404，组件会改用 Unsplash 占位图，看起来就像「图片错了」。");
-  console.error("  - 请把相机/选片后的文件按上述文件名放入 public/assets/photos/，然后执行：");
-  console.error("    git add public/assets/photos/*.jpg && git commit -m \"chore: add factory photos\" && git push");
-  console.error("\n（本仓库没有 @assets 别名；请使用 public/assets/photos/，与 src/lib/images.ts 中一致。）\n");
+  console.error("\n请把工厂照片放到 src/assets/photos/ 并保持上述文件名，然后 git add / push。\n");
   process.exit(1);
 }
 
-console.log("[photos] OK — all", REQUIRED.length, "factory JPEGs present under public/assets/photos/");
+console.log("[photos] OK —", REQUIRED.length, "files under src/assets/photos/");

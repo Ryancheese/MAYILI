@@ -26,11 +26,9 @@ Output is written to `dist/`.
 
 ## GitHub Pages
 
-The workflow (`.github/workflows/pages.yml`) builds with:
+The workflow builds with **`BASE_URL: ./`** so asset URLs stay **relative** to the deployed path (works for `https://<user>.github.io/<repo>/` without depending on exact repo-name casing).
 
-- `BASE_URL: /${{ github.event.repository.name }}/`
-
-If you publish a **user/org root site** (e.g. `https://username.github.io/` with no repo path), set `BASE_URL` to `/` in the workflow (or in `vite.config.ts`).
+If you ever need an **absolute** base path instead, set `BASE_URL` in the workflow (e.g. `/<repository>/`) and `vite.config.ts` to match.
 
 ## Hero video (optional)
 
@@ -38,34 +36,24 @@ Set **`VITE_HERO_VIDEO_URL`** at build time to a **muted** HTTPS MP4 loop if you
 
 If unset, the hero uses the factory image (Ken Burns + parallax) only.
 
-## Photos（工厂图 / GitHub 上「图片错了」必读）
+## Photos（工厂图 — 已改为随构建打包）
 
-网站使用的是 **Vite 的 `public/` 目录**，不是 IDE 里的 `@assets` 路径别名。代码里通过 `import.meta.env.BASE_URL + "assets/photos/…"` 引用，对应磁盘路径为：
+图片放在 **`src/assets/photos/`** 与 **`src/assets/categories/`**，在 `src/lib/images.ts` 里用 **`import … from '…?url'`** 引入。Vite 会：
 
-**`public/assets/photos/*.jpg`**
+- 把文件输出到 **`dist/assets/`**（带内容哈希的文件名），
+- 在 JS 里写入 **相对路径**（配合 `base: './'`，适配 GitHub Pages 子路径）。
 
-必须满足两点，GitHub Pages 才会显示真实工厂图：
+这样 **不再依赖** `public/assets/photos/` 是否单独提交到 GitHub；只要源码里的 JPEG 在仓库里，线上就会和本地一致。
 
-1. **文件必须提交到 Git**  
-   当前仓库里如果只有 `.gitkeep`、没有 JPG，线上构建产物里就**没有**这些图片，浏览器请求会 **404**。`FactoryImg` 会在加载失败后改用 **Unsplash 占位图**，所以你会感觉「线上图片都是错的、本地却正常」——通常是因为 **本地有图但没 `git add` / 没 push**，或 **Linux 区分大小写** 导致文件名不一致。
-
-2. **文件名与 `src/lib/images.ts` 完全一致**（含大小写），例如：`hero-factory.jpg`、`entrance.jpg` 等。
-
-推送前自检（缺文件会列出清单并以退出码 1 结束）：
+推送前检查：
 
 ```bash
 npm run check:photos
 ```
 
-补全图片后：
+用你自己的工厂照 **覆盖** `src/assets/photos/*.jpg`（保持文件名不变），再 `git add`、`commit`、`push` 即可。品类图：`src/assets/categories/{gym,running,yoga,casual}.jpg`。
 
-```bash
-git add public/assets/photos/*.jpg
-git commit -m "chore: add factory photos for Pages"
-git push
-```
-
-可选品类图：`public/assets/categories/{gym,running,yoga,casual}.jpg`。
+`public/assets/photos/` 仅作遗留说明时可忽略；首屏视频等仍可用 `public/media/`。
 
 ## Legacy static server
 

@@ -1,8 +1,30 @@
 /**
- * Factory JPEGs live under public/assets/photos/ (not an @assets alias).
- * Vite copies public/ into dist/ at build time; only tracked files exist on GitHub Pages.
- * @see scripts/verify-public-photos.mjs — run: npm run check:photos
+ * Factory & category images are bundled from `src/assets/**` with `?url`.
+ * Vite rewrites URLs for `base` (GitHub Pages), so online paths stay correct.
+ * Replace JPEGs in `src/assets/photos/` and `src/assets/categories/` with real shots (keep filenames).
  */
+import casualUrl from "../assets/categories/casual.jpg?url";
+import gymUrl from "../assets/categories/gym.jpg?url";
+import runningUrl from "../assets/categories/running.jpg?url";
+import yogaUrl from "../assets/categories/yoga.jpg?url";
+
+import corridorUrl from "../assets/photos/corridor.jpg?url";
+import cuttingUrl from "../assets/photos/cutting-room.jpg?url";
+import detailUrl from "../assets/photos/equipment-detail.jpg?url";
+import flatlockUrl from "../assets/photos/equipment-flatlock.jpg?url";
+import jukiUrl from "../assets/photos/equipment-juki.jpg?url";
+import lineUrl from "../assets/photos/equipment-line.jpg?url";
+import entranceUrl from "../assets/photos/entrance.jpg?url";
+import fabricUrl from "../assets/photos/fabric-prep.jpg?url";
+import heroUrl from "../assets/photos/hero-factory.jpg?url";
+import meetingUrl from "../assets/photos/meeting-workshop.jpg?url";
+import officeUrl from "../assets/photos/office.jpg?url";
+import sewingUrl from "../assets/photos/sewing-floor.jpg?url";
+import racksUrl from "../assets/photos/showroom-racks.jpg?url";
+import wideUrl from "../assets/photos/showroom-wide.jpg?url";
+import signageUrl from "../assets/photos/signage.jpg?url";
+
+/** Optional `public/` files (e.g. hero video). Still needs `BASE_URL` when not using bundled assets. */
 export function publicUrl(path: string): string {
   const base = import.meta.env.BASE_URL;
   const normalized = path.replace(/^\/+/, "");
@@ -10,61 +32,61 @@ export function publicUrl(path: string): string {
 }
 
 export const PHOTO = {
-  hero: publicUrl("assets/photos/hero-factory.jpg"),
-  meeting: publicUrl("assets/photos/meeting-workshop.jpg"),
-  cutting: publicUrl("assets/photos/cutting-room.jpg"),
-  fabric: publicUrl("assets/photos/fabric-prep.jpg"),
-  juki: publicUrl("assets/photos/equipment-juki.jpg"),
-  flatlock: publicUrl("assets/photos/equipment-flatlock.jpg"),
-  detail: publicUrl("assets/photos/equipment-detail.jpg"),
-  line: publicUrl("assets/photos/equipment-line.jpg"),
-  entrance: publicUrl("assets/photos/entrance.jpg"),
-  signage: publicUrl("assets/photos/signage.jpg"),
-  sewing: publicUrl("assets/photos/sewing-floor.jpg"),
-  showroomWide: publicUrl("assets/photos/showroom-wide.jpg"),
-  showroomRacks: publicUrl("assets/photos/showroom-racks.jpg"),
-  office: publicUrl("assets/photos/office.jpg"),
-  corridor: publicUrl("assets/photos/corridor.jpg"),
+  hero: heroUrl,
+  meeting: meetingUrl,
+  cutting: cuttingUrl,
+  fabric: fabricUrl,
+  juki: jukiUrl,
+  flatlock: flatlockUrl,
+  detail: detailUrl,
+  line: lineUrl,
+  entrance: entranceUrl,
+  signage: signageUrl,
+  sewing: sewingUrl,
+  showroomWide: wideUrl,
+  showroomRacks: racksUrl,
+  office: officeUrl,
+  corridor: corridorUrl,
 } as const;
 
 export const FALLBACK: Record<string, string> = {
-  [PHOTO.hero]:
+  [heroUrl]:
     "https://images.unsplash.com/photo-1581092160562-40aa08e66837?auto=format&fit=crop&w=1920&q=80",
-  [PHOTO.meeting]:
+  [meetingUrl]:
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.cutting]:
+  [cuttingUrl]:
     "https://images.unsplash.com/photo-1558171813-3c0888c0efb7?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.fabric]:
+  [fabricUrl]:
     "https://images.unsplash.com/photo-1558171813-3c0888c0efb7?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.juki]:
+  [jukiUrl]:
     "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=80",
-  [PHOTO.flatlock]:
+  [flatlockUrl]:
     "https://images.unsplash.com/photo-1620799140408-ed534f99a329?auto=format&fit=crop&w=900&q=80",
-  [PHOTO.detail]:
+  [detailUrl]:
     "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80",
-  [PHOTO.line]:
+  [lineUrl]:
     "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=80",
-  [PHOTO.entrance]:
+  [entranceUrl]:
     "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1400&q=80",
-  [PHOTO.signage]:
+  [signageUrl]:
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-  [PHOTO.sewing]:
+  [sewingUrl]:
     "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.showroomWide]:
+  [wideUrl]:
     "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80",
-  [PHOTO.showroomRacks]:
+  [racksUrl]:
     "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.office]:
+  [officeUrl]:
     "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-  [PHOTO.corridor]:
+  [corridorUrl]:
     "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
 };
 
 export const CATEGORY = {
-  gym: publicUrl("assets/categories/gym.jpg"),
-  running: publicUrl("assets/categories/running.jpg"),
-  yoga: publicUrl("assets/categories/yoga.jpg"),
-  casual: publicUrl("assets/categories/casual.jpg"),
+  gym: gymUrl,
+  running: runningUrl,
+  yoga: yogaUrl,
+  casual: casualUrl,
 } as const;
 
 export const CATEGORY_FALLBACK = {
