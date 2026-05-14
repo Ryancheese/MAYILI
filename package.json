@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "check:photos": "node scripts/verify-public-photos.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

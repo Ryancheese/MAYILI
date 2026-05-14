@@ -1,6 +1,7 @@
 /**
- * Files under `public/` (e.g. `public/assets/photos/...`).
- * Must use Vite `BASE_URL` so GitHub Pages project sites resolve correctly (`/repo-name/...`).
+ * Factory JPEGs live under public/assets/photos/ (not an @assets alias).
+ * Vite copies public/ into dist/ at build time; only tracked files exist on GitHub Pages.
+ * @see scripts/verify-public-photos.mjs — run: npm run check:photos
  */
 export function publicUrl(path: string): string {
   const base = import.meta.env.BASE_URL;
