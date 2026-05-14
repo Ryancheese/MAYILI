@@ -32,12 +32,11 @@ The workflow (`.github/workflows/pages.yml`) builds with:
 
 If you publish a **user/org root site** (e.g. `https://username.github.io/` with no repo path), set `BASE_URL` to `/` in the workflow (or in `vite.config.ts`).
 
-## Hero video (recommended)
+## Hero video (optional)
 
-1. Export a **muted**, short loop (H.264 + AAC), place at `public/media/hero.mp4`, **or**
-2. Set `VITE_HERO_VIDEO_URL` to an HTTPS MP4 URL at build time.
+Set **`VITE_HERO_VIDEO_URL`** at build time to a **muted** HTTPS MP4 loop if you want video on the hero. The site **does not** auto-load `public/media/hero.mp4` by default: a missing file often shows as a **black rectangle** on top of the background image in many browsers.
 
-If the file is missing, the hero still animates via **Ken Burns** on the poster image and parallax on scroll.
+If unset, the hero uses the factory image (Ken Burns + parallax) only.
 
 ## Photos
 

@@ -1,18 +1,17 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import { PHOTO, publicUrl } from "../lib/images";
+import { PHOTO } from "../lib/images";
 import { FactoryImg } from "./FactoryImg";
 
+/** Only load hero video when explicitly configured. A missing MP4 often renders as a black plane above the poster image. */
 function heroVideoSrc(): string | undefined {
-  const env = import.meta.env.VITE_HERO_VIDEO_URL;
-  if (env) return env;
-  return publicUrl("media/hero.mp4");
+  return import.meta.env.VITE_HERO_VIDEO_URL || undefined;
 }
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
-  const [videoVisible, setVideoVisible] = useState(true);
+  const [videoVisible, setVideoVisible] = useState(Boolean(heroVideoSrc()));
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -26,7 +25,7 @@ export function Hero() {
     <section className="hero" id="home" ref={ref}>
       <motion.div className="hero-media" style={{ y, scale }}>
         <div className="hero-kenburns" aria-hidden>
-          <FactoryImg src={PHOTO.hero} alt="" />
+          <FactoryImg src={PHOTO.hero} alt="" loading="eager" fetchPriority="high" decoding="async" />
         </div>
         {src && videoVisible ? (
           <video
@@ -38,6 +37,9 @@ export function Hero() {
             poster={PHOTO.hero}
             aria-label="Hero manufacturing video"
             onError={() => setVideoVisible(false)}
+            onLoadedData={(e) => {
+              e.currentTarget.classList.add("is-ready");
+            }}
           >
             <source src={src} type="video/mp4" />
           </video>

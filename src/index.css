@@ -215,6 +215,7 @@ h3 {
 .hero-kenburns {
   position: absolute;
   inset: -8%;
+  z-index: 0;
   animation: kenburns 22s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -229,16 +230,23 @@ h3 {
 .hero-video {
   position: absolute;
   inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.92;
+  opacity: 0;
+  transition: opacity 0.45s ease;
   mix-blend-mode: normal;
+}
+
+.hero-video.is-ready {
+  opacity: 0.92;
 }
 
 .hero-shade {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background:
     linear-gradient(90deg, rgba(7, 8, 9, 0.78), rgba(7, 8, 9, 0.32) 55%, rgba(7, 8, 9, 0.68)),
     linear-gradient(180deg, rgba(7, 8, 9, 0.2), rgba(7, 8, 9, 0.82));
@@ -247,6 +255,7 @@ h3 {
 .hero-grain {
   position: absolute;
   inset: 0;
+  z-index: 3;
   opacity: 0.12;
   mix-blend-mode: overlay;
   pointer-events: none;

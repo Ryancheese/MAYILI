@@ -1,2 +1,2 @@
-Place a short looped hero video here as `hero.mp4` (H.264 + AAC, muted-friendly).
-The site loads `/media/hero.mp4` automatically. You can also set `VITE_HERO_VIDEO_URL` for a CDN URL at build time.
+Hero background video is optional. Set **`VITE_HERO_VIDEO_URL`** at build time to an HTTPS MP4 (muted, loop-friendly).  
+The app does **not** auto-request `public/media/hero.mp4` anymore: browsers often paint a black `<video>` layer when the file is missing, which hides the factory photo underneath.
