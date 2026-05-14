@@ -14,6 +14,7 @@ const types = {
   ".png": "image/png",
   ".webp": "image/webp",
   ".json": "application/json; charset=utf-8",
+  ".mp4": "video/mp4",
 };
 
 createServer((request, response) => {
@@ -31,5 +32,6 @@ createServer((request, response) => {
   response.writeHead(200, { "content-type": types[extname(filePath)] || "application/octet-stream" });
   createReadStream(filePath).pipe(response);
 }).listen(port, () => {
-  console.log(`Mayili website running at http://localhost:${port}`);
+  console.log(`Static file server at http://localhost:${port}`);
+  console.log("For the React site, run: npm run dev   (or npm run preview after npm run build)");
 });

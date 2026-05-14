@@ -1,33 +1,48 @@
-# MAYILI
+# MAYILI / MACHINE
 
-Official static website for Mayili Clothing Trade / MACHINE, built from the factory introduction document and selected factory photos.
+Official marketing site for **Mayili Clothing Trade**, rebuilt as a **React 19 + Vite 6 + TypeScript** SPA with **Framer Motion** for scroll and hero motion. Content targets U.S. performance/DTC buyers while keeping Chinese operational detail.
 
-## Tech
+## Tech stack
 
-- Semantic HTML5
-- Modern responsive CSS with `svh`, `clamp()`, CSS grid, and `backdrop-filter`
-- Lightweight JavaScript for mobile navigation
-- Local Node static server, no dependency install required
+- React 19, TypeScript, Vite 6
+- Framer Motion (reduced-motion aware)
+- Global CSS (design tokens, responsive grid, marquee)
 
-## Preview
+## Local development
 
 ```bash
-node server.mjs
+npm install
+npm run dev
 ```
 
-Then open:
+## Production build
 
-```text
-http://localhost:4173
+```bash
+npm run build
+npm run preview
 ```
 
-## Photo Selection
+Output is written to `dist/`.
 
-The site uses 15 selected photos covering:
+## GitHub Pages
 
-- Factory exterior and entrance
-- Company signage
-- Sewing floor, cutting room, and fabric preparation
-- Sample showroom and office
-- JUKI and specialty sewing equipment
-- Factory corridor
+The workflow (`.github/workflows/pages.yml`) builds with:
+
+- `BASE_URL: /${{ github.event.repository.name }}/`
+
+If you publish a **user/org root site** (e.g. `https://username.github.io/` with no repo path), set `BASE_URL` to `/` in the workflow (or in `vite.config.ts`).
+
+## Hero video (recommended)
+
+1. Export a **muted**, short loop (H.264 + AAC), place at `public/media/hero.mp4`, **or**
+2. Set `VITE_HERO_VIDEO_URL` to an HTTPS MP4 URL at build time.
+
+If the file is missing, the hero still animates via **Ken Burns** on the poster image and parallax on scroll.
+
+## Photos
+
+Put real factory photography under `public/assets/photos/` using the filenames referenced in `src/lib/images.ts`. Optional category shots: `public/assets/categories/{gym,running,yoga,casual}.jpg`. When a file is missing, the UI falls back to temporary stock imagery so development is not blocked.
+
+## Legacy static server
+
+`server.mjs` is a tiny static file host for emergencies only; day-to-day preview should use Vite (`npm run dev` / `npm run preview`).
