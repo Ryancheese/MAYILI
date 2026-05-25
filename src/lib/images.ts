@@ -3,10 +3,10 @@
  * In Cursor you can refer to this folder as @assets/photos — same as `src/assets/photos/`.
  * Run `node scripts/fetch-semantic-photos.mjs` to refresh themed placeholders from Unsplash.
  */
-import casualUrl from "@assets/categories/casual.jpg?url";
-import gymUrl from "@assets/categories/gym.jpg?url";
-import runningUrl from "@assets/categories/running.jpg?url";
-import yogaUrl from "@assets/categories/yoga.jpg?url";
+import casualUrl from "@assets/categories/casual-generated.png?url";
+import gymUrl from "@assets/categories/gym-generated.png?url";
+import runningUrl from "@assets/categories/running-generated.png?url";
+import yogaUrl from "@assets/categories/yoga-generated.png?url";
 
 import corridorUrl from "@assets/photos/corridor.jpg?url";
 import cuttingUrl from "@assets/photos/cutting-room.jpg?url";
