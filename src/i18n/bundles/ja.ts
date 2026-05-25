@@ -13,7 +13,7 @@ export default {
   "header.navAria": "メインナビゲーション",
   "lang.aria": "表示言語",
 
-  "hero.eyebrow": "YOUR PERFORMANCE APPAREL PARTNER",
+  "hero.eyebrow": "あなたのパフォーマンスアパレルパートナー",
   "hero.title": "上海馬億里服飾貿易有限公司",
   "hero.lede":
     "新興のパフォーマンスアパレルブランドが業界大手と競えるよう支援します。サンプリング、低MOQ、米国スタートアップが重視するローンチスケジュールまで、構想から店頭まで一貫してサポートします。",
@@ -78,16 +78,16 @@ export default {
   "tech.lede":
     "キーワードの羅列ではなく、調達・製品チームに伝わるよう実能力を言語化します。",
   "tech.marqueeAria": "技術キーワード",
-  "tech.t0": "Flatlock Construction",
-  "tech.t1": "4-Way Stretch",
-  "tech.t2": "Moisture Wicking",
-  "tech.t3": "Bonded Seams",
-  "tech.t4": "Anti-Odor Finish",
-  "tech.t5": "Reflective Transfer",
-  "tech.t6": "Laser Cut Ventilation",
-  "tech.t7": "Brushed Back Fleece",
-  "tech.t8": "Compression Fit Engineering",
-  "tech.t9": "Durable Water Repellent (DWR)",
+  "tech.t0": "フラットロック縫製",
+  "tech.t1": "4WAYストレッチ",
+  "tech.t2": "吸湿速乾",
+  "tech.t3": "ボンディングシーム",
+  "tech.t4": "抗菌消臭加工",
+  "tech.t5": "反射転写",
+  "tech.t6": "レーザーカット通気",
+  "tech.t7": "裏起毛フリース",
+  "tech.t8": "コンプレッションフィット設計",
+  "tech.t9": "撥水加工（DWR）",
 
   "founder.eyebrow": "人と人の信頼",
   "founder.title": "2000年上海創業 — スピードを求めるブランドのために",
@@ -175,7 +175,7 @@ export default {
   "contact.enLabel": "英語表記",
   "contact.enValue": "Mayili Clothing Trade (Taizhou) Co., Ltd.",
 
-  "footer.copy": "© 2026 Mayili Clothing Trade. All rights reserved.",
+  "footer.copy": "© 2026 Mayili Clothing Trade. 無断転載を禁じます。",
   "footer.top": "ページ上部へ",
 
   "brand.sub": "Mayili Clothing Trade",

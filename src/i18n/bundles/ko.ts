@@ -13,7 +13,7 @@ export default {
   "header.navAria": "주 메뉴",
   "lang.aria": "표시 언어",
 
-  "hero.eyebrow": "YOUR PERFORMANCE APPAREL PARTNER",
+  "hero.eyebrow": "퍼포먼스 의류 파트너",
   "hero.title": "상하이 마이리 의류 무역 유한공사",
   "hero.lede":
     "신흥 퍼포먼스 의류 브랜드가 업계 대기업과 경쟁할 수 있도록 돕습니다. 샘플링, 낮은 MOQ, 미국 스타트업이 중시하는 출시 일정까지, 기획부터 매장 진열까지 지원합니다.",
@@ -59,7 +59,7 @@ export default {
   "motion.title": "퍼포먼스 브랜드가 기대하는 모션",
   "motion.lede":
     "모션은 장식이 아니라 ‘만들 수 있는가’, ‘브랜드처럼 보이는가’, ‘납기를 지키는가’에 답합니다.",
-  "motion.tag": "B-roll 슬롯",
+  "motion.tag": "영상 슬롯",
   "motion.t0t": "봉제 라인 리듬",
   "motion.t0s": "노루미/오버록/커버스티치",
   "motion.t0c": "미싱 클로즈업 루프 영상으로 전환하면 전환율이 좋아집니다.",
@@ -71,23 +71,23 @@ export default {
   "motion.t2c": "열전사 매크로 영상은 스크롤 시 프리미엄 느낌을 줍니다.",
   "motion.t3t": "완성 착용",
   "motion.t3s": "피팅·실루엣 확인",
-  "motion.t3c": "모델 착용 B-roll로 시각적 의사결정을 돕습니다.",
+  "motion.t3c": "모델 착용 영상으로 시각적 의사결정을 돕습니다.",
 
   "tech.eyebrow": "기술 스토리텔링",
   "tech.title": "바이어의 언어로 말하고 — SEO에도 도움",
   "tech.lede":
     "키워드 나열이 아니라 조달·제품팀이 이해하는 언어로 실제 역량을 옮깁니다.",
   "tech.marqueeAria": "기술 키워드",
-  "tech.t0": "Flatlock Construction",
-  "tech.t1": "4-Way Stretch",
-  "tech.t2": "Moisture Wicking",
-  "tech.t3": "Bonded Seams",
-  "tech.t4": "Anti-Odor Finish",
-  "tech.t5": "Reflective Transfer",
-  "tech.t6": "Laser Cut Ventilation",
-  "tech.t7": "Brushed Back Fleece",
-  "tech.t8": "Compression Fit Engineering",
-  "tech.t9": "Durable Water Repellent (DWR)",
+  "tech.t0": "플랫록 봉제",
+  "tech.t1": "4방향 스트레치",
+  "tech.t2": "흡습속건",
+  "tech.t3": "본딩 시임",
+  "tech.t4": "항균 탈취 가공",
+  "tech.t5": "반사 열전사",
+  "tech.t6": "레이저 커팅 환기",
+  "tech.t7": "기모 플리스",
+  "tech.t8": "컴프레션 핏 설계",
+  "tech.t9": "내구 발수 가공 (DWR)",
 
   "founder.eyebrow": "사람과 사람",
   "founder.title": "2000년 상하이 창업 — 빠르게 가고 싶은 브랜드를 위해",
@@ -175,7 +175,7 @@ export default {
   "contact.enLabel": "영문 표기",
   "contact.enValue": "Mayili Clothing Trade (Taizhou) Co., Ltd.",
 
-  "footer.copy": "© 2026 Mayili Clothing Trade. All rights reserved.",
+  "footer.copy": "© 2026 Mayili Clothing Trade. 모든 권리 보유.",
   "footer.top": "맨 위로",
 
   "brand.sub": "Mayili Clothing Trade",
