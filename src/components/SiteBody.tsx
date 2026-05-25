@@ -1,4 +1,6 @@
 import { FactoryImg } from "./FactoryImg";
+import { FootnoteRef } from "./FootnoteRef";
+import { GalleryAlbum } from "./GalleryAlbum";
 import { PHOTO } from "../lib/images";
 import { useI18n } from "../i18n/context";
 
@@ -55,11 +57,14 @@ export function SiteBody() {
         </div>
       </section>
 
-      <section className="equipment-strip" aria-label={t("equipment.aria")}>
-        <FactoryImg src={PHOTO.juki} alt="" />
-        <FactoryImg src={PHOTO.flatlock} alt="" />
-        <FactoryImg src={PHOTO.detail} alt="" />
-        <FactoryImg src={PHOTO.line} alt="" />
+      <section className="equipment section-tight" aria-label={t("equipment.aria")}>
+        <div className="equipment-strip">
+          <FactoryImg src={PHOTO.juki} alt={t("equipment.altJuki")} />
+          <FactoryImg src={PHOTO.flatlock} alt={t("equipment.altFlatlock")} />
+          <FactoryImg src={PHOTO.detail} alt={t("equipment.altDetail")} />
+          <FactoryImg src={PHOTO.line} alt={t("equipment.altLine")} />
+        </div>
+        <p className="equipment-lede">{t("equipment.lede")}</p>
       </section>
 
       <section className="quality section" id="quality">
@@ -105,38 +110,12 @@ export function SiteBody() {
       <section className="gallery section" id="gallery">
         <div className="section-heading">
           <p className="eyebrow">{t("gallery.eyebrow")}</p>
-          <h2>{t("gallery.title")}</h2>
+          <h2>
+            {t("gallery.title")}
+            <FootnoteRef id={3} />
+          </h2>
         </div>
-        <div className="gallery-grid">
-          <figure className="wide">
-            <FactoryImg src={PHOTO.entrance} alt={t("gallery.altEntrance")} />
-            <figcaption>{t("gallery.cEntrance")}</figcaption>
-          </figure>
-          <figure>
-            <FactoryImg src={PHOTO.signage} alt={t("gallery.altSignage")} />
-            <figcaption>{t("gallery.cSignage")}</figcaption>
-          </figure>
-          <figure>
-            <FactoryImg src={PHOTO.sewing} alt={t("gallery.altSewing")} />
-            <figcaption>{t("gallery.cSewing")}</figcaption>
-          </figure>
-          <figure>
-            <FactoryImg src={PHOTO.showroomWide} alt={t("gallery.altShow")} />
-            <figcaption>{t("gallery.cShow")}</figcaption>
-          </figure>
-          <figure>
-            <FactoryImg src={PHOTO.showroomRacks} alt={t("gallery.altRacks")} />
-            <figcaption>{t("gallery.cRacks")}</figcaption>
-          </figure>
-          <figure>
-            <FactoryImg src={PHOTO.office} alt={t("gallery.altOffice")} />
-            <figcaption>{t("gallery.cOffice")}</figcaption>
-          </figure>
-          <figure className="wide">
-            <FactoryImg src={PHOTO.corridor} alt={t("gallery.altCorridor")} />
-            <figcaption>{t("gallery.cCorridor")}</figcaption>
-          </figure>
-        </div>
+        <GalleryAlbum />
       </section>
 
       <section className="contact section" id="contact">

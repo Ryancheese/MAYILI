@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { useI18n } from "../i18n/context";
-import { LANGS, LANG_LABEL } from "../i18n/types";
+import { LANGS, LANG_LABEL, HTML_LANG } from "../i18n/types";
 
-const navKeys: { href: string; key: string }[] = [
-  { href: "#about", key: "nav.about" },
-  { href: "#categories", key: "nav.categories" },
-  { href: "#tech", key: "nav.tech" },
-  { href: "#services", key: "nav.services" },
-  { href: "#capacity", key: "nav.capacity" },
-  { href: "#quality", key: "nav.quality" },
-  { href: "#gallery", key: "nav.gallery" },
-  { href: "#contact", key: "nav.contact" },
-];
+const navLinks = [
+  { to: "/", key: "nav.home", end: true },
+  { to: "/about", key: "nav.about", end: false },
+  { to: "/services", key: "nav.services", end: false },
+  { to: "/contact", key: "nav.contact", end: false },
+] as const;
 
 export function Header() {
   const { lang, setLang, t } = useI18n();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
@@ -27,22 +25,37 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const headerClass = scrolled || open ? "site-header is-scrolled" : "site-header";
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
+  const headerClass =
+    scrolled || open || location.pathname !== "/" ? "site-header is-scrolled" : "site-header";
+
+  const isActive = (to: string, end: boolean) => {
+    if (end) return location.pathname === "/";
+    return location.pathname === to;
+  };
 
   return (
     <header className={`${headerClass}${open ? " is-open" : ""}`}>
-      <a className="brand" href="#home" aria-label={t("header.homeAria")}>
+      <Link className="brand" to="/" aria-label={t("header.homeAria")}>
         <span className="brand-mark">M</span>
         <span>
           <strong>MACHINE</strong>
           <small>{t("brand.sub")}</small>
         </span>
-      </a>
+      </Link>
       <nav className="nav-links" aria-label={t("header.navAria")}>
-        {navKeys.map((l) => (
-          <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+        {navLinks.map((l) => (
+          <Link
+            key={l.to}
+            to={l.to}
+            className={isActive(l.to, l.end) ? "is-active" : undefined}
+            onClick={() => setOpen(false)}
+          >
             <span className="nav-primary">{t(l.key)}</span>
-          </a>
+          </Link>
         ))}
       </nav>
       <div className="lang-switch" role="group" aria-label={t("lang.aria")}>
@@ -52,7 +65,7 @@ export function Header() {
             type="button"
             className={`lang-btn${lang === code ? " is-active" : ""}`}
             onClick={() => setLang(code)}
-            lang={code === "zh" ? "zh-CN" : code}
+            lang={HTML_LANG[code]}
             aria-pressed={lang === code}
           >
             {LANG_LABEL[code]}

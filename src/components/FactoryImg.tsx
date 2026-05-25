@@ -5,7 +5,7 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
   src: string;
 };
 
-export function FactoryImg({ src, alt, onError, ...rest }: Props) {
+export function FactoryImg({ src, alt, onError, className, ...rest }: Props) {
   const fb = ALL_FALLBACK[src];
   const [current, setCurrent] = useState(src);
 
@@ -20,5 +20,17 @@ export function FactoryImg({ src, alt, onError, ...rest }: Props) {
     [current, fb, onError],
   );
 
-  return <img src={current} alt={alt} loading="lazy" decoding="async" onError={handleError} {...rest} />;
+  const mergedClass = className ? `site-photo ${className}` : "site-photo";
+
+  return (
+    <img
+      src={current}
+      alt={alt}
+      className={mergedClass}
+      loading="lazy"
+      decoding="async"
+      onError={handleError}
+      {...rest}
+    />
+  );
 }

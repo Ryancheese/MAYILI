@@ -1,39 +1,21 @@
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { SocialProof } from "./components/SocialProof";
-import { Certifications } from "./components/Certifications";
-import { Categories } from "./components/Categories";
-import { MotionShowcase } from "./components/MotionShowcase";
-import { TechLanguage } from "./components/TechLanguage";
-import { FounderStory } from "./components/FounderStory";
-import { SiteBody } from "./components/SiteBody";
-import { useI18n } from "./i18n/context";
-
-function Footer() {
-  const { t } = useI18n();
-  return (
-    <footer className="site-footer">
-      <span>{t("footer.copy")}</span>
-      <a href="#home">{t("footer.top")}</a>
-    </footer>
-  );
-}
+import { HashRouter, Route, Routes } from "react-router-dom";
+import { SiteLayout } from "./layout/SiteLayout";
+import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { ContactPage } from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <SocialProof />
-        <Certifications />
-        <Categories />
-        <MotionShowcase />
-        <TechLanguage />
-        <FounderStory />
-        <SiteBody />
-      </main>
-      <Footer />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route element={<SiteLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   );
 }

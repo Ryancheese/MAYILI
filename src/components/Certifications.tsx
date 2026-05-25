@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { FootnoteRef } from "./FootnoteRef";
 import { useI18n } from "../i18n/context";
 
 const badges = [
@@ -14,7 +15,10 @@ export function Certifications() {
     <section className="certs section-tight" aria-label={t("cert.eyebrow")}>
       <Reveal>
         <div className="certs-inner">
-          <p className="eyebrow certs-eyebrow">{t("cert.eyebrow")}</p>
+          <p className="eyebrow certs-eyebrow">
+            {t("cert.eyebrow")}
+            <FootnoteRef id={4} />
+          </p>
           <ul className="certs-list">
             {badges.map((b) => (
               <li key={b.code}>
@@ -23,7 +27,6 @@ export function Certifications() {
               </li>
             ))}
           </ul>
-          <p className="certs-disclaimer">{t("cert.disclaimer")}</p>
         </div>
       </Reveal>
     </section>

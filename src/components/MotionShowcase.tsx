@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { FactoryImg } from "./FactoryImg";
+import { FootnoteRef } from "./FootnoteRef";
 import { PHOTO } from "../lib/images";
 import { useI18n } from "../i18n/context";
 import { Reveal } from "./Reveal";
@@ -14,7 +15,10 @@ export function MotionShowcase() {
     <section className="motion-showcase section" id="motion">
       <div className="section-heading">
         <p className="eyebrow">{t("motion.eyebrow")}</p>
-        <h2>{t("motion.title")}</h2>
+        <h2>
+          {t("motion.title")}
+          <FootnoteRef id={2} />
+        </h2>
         <p className="section-lede">{t("motion.lede")}</p>
       </div>
       <div className="motion-grid">
@@ -28,7 +32,6 @@ export function MotionShowcase() {
               <div className="motion-card-media">
                 <FactoryImg src={tileImgs[i]} alt="" />
                 <div className="motion-card-shade" />
-                <span className="motion-card-tag">{t("motion.tag")}</span>
               </div>
               <div className="motion-card-body">
                 <h3>{t(`motion.t${i}t`)}</h3>

@@ -51,8 +51,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const t = useCallback(
     (key: string) => {
       const pack = bundles[lang];
-      const fallback = bundles.en;
-      return pack[key] ?? fallback[key] ?? key;
+      const zhFallback = lang === "tw" ? bundles.zh : null;
+      return pack[key] ?? zhFallback?.[key] ?? bundles.en[key] ?? key;
     },
     [lang],
   );
