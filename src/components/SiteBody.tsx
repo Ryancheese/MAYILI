@@ -1,4 +1,5 @@
 import { FactoryImg } from "./FactoryImg";
+import { ContactDetails } from "./ContactDetails";
 import { FootnoteRef } from "./FootnoteRef";
 import { GalleryAlbum } from "./GalleryAlbum";
 import { PHOTO } from "../lib/images";
@@ -125,24 +126,7 @@ export function SiteBody() {
             <h2>{t("contact.title")}</h2>
             <p>{t("contact.intro")}</p>
           </div>
-          <div className="contact-details">
-            <p>
-              <strong>{t("contact.addrLabel")}</strong>{" "}
-              {t("contact.addrValue")}
-            </p>
-            <p>
-              <strong>{t("contact.factoryLabel")}</strong>{" "}
-              {t("contact.factoryValue")}
-            </p>
-            <p>
-              <strong>{t("contact.coLabel")}</strong>{" "}
-              {t("contact.coValue")}
-            </p>
-            <p>
-              <strong>{t("contact.enLabel")}</strong>{" "}
-              {t("contact.enValue")}
-            </p>
-          </div>
+          <ContactDetails />
         </div>
       </section>
     </>

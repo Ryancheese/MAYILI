@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ContactDetails } from "../components/ContactDetails";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Reveal";
 import { useI18n } from "../i18n/context";
@@ -24,24 +25,7 @@ export function ContactPage() {
               <h2>{t("contact.title")}</h2>
               <p>{t("contact.intro")}</p>
             </div>
-            <div className="contact-details">
-              <p>
-                <strong>{t("contact.addrLabel")}</strong>
-                {t("contact.addrValue")}
-              </p>
-              <p>
-                <strong>{t("contact.factoryLabel")}</strong>
-                {t("contact.factoryValue")}
-              </p>
-              <p>
-                <strong>{t("contact.coLabel")}</strong>
-                {t("contact.coValue")}
-              </p>
-              <p>
-                <strong>{t("contact.enLabel")}</strong>
-                {t("contact.enValue")}
-              </p>
-            </div>
+            <ContactDetails />
           </div>
         </Reveal>
       </section>

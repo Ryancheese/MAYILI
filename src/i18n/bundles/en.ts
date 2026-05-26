@@ -177,6 +177,7 @@ export default {
   "contact.title": "OEM / ODM inquiries welcome",
   "contact.intro":
     "Send product images, samples, tech packs, size charts, quantities, and target dates — we will advise on sampling, pricing, and production planning.",
+  "contact.usLabel": "North America Inquiries",
   "contact.addrLabel": "Office",
   "contact.addrValue": "Sheng Gao International Tower, 137 Xianxia Road, Changning, Shanghai",
   "contact.factoryLabel": "Factory",

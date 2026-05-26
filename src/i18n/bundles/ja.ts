@@ -177,6 +177,7 @@ export default {
   "contact.title": "OEM / ODM のご相談歓迎",
   "contact.intro":
     "製品画像、サンプル、仕様書、サイズ表、数量、希望納期をお送りください。サンプル・見積・生産計画をご提案します。",
+  "contact.usLabel": "北米事業連絡",
   "contact.addrLabel": "本社",
   "contact.addrValue": "上海市長寧区仙霞路137号盛高国際大厦",
   "contact.factoryLabel": "工場",

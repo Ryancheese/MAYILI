@@ -177,6 +177,7 @@ export default {
   "contact.title": "OEM / ODM 상담 환영",
   "contact.intro":
     "제품 이미지, 샘플, 사양서, 사이즈 차트, 수량, 목표 납기를 보내주시면 샘플·견적·생산 계획을 안내합니다.",
+  "contact.usLabel": "북미 사업 문의",
   "contact.addrLabel": "사무소",
   "contact.addrValue": "상하이시 창닝구 선하루 137호 성고 국제빌딩",
   "contact.factoryLabel": "공장",

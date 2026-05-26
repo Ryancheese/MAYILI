@@ -176,6 +176,7 @@ export default {
   "contact.title": "歡迎諮詢 OEM / ODM 訂單合作",
   "contact.intro":
     "可發送產品圖、樣衣、工藝單、尺碼表、預計數量與交期要求，我們將據此評估打樣、報價與排產方案。",
+  "contact.usLabel": "北美業務聯絡",
   "contact.addrLabel": "公司地址",
   "contact.addrValue": "上海市長寧區仙霞路 137 號盛高國際大廈",
   "contact.factoryLabel": "工廠地址",

@@ -1337,6 +1337,16 @@ figcaption {
   color: var(--ink);
 }
 
+.contact-details .contact-email {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-details .contact-email:hover {
+  color: #154fa8;
+}
+
 .site-footer {
   padding: 0;
   color: rgba(255, 255, 255, 0.72);
