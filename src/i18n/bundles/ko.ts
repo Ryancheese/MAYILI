@@ -35,6 +35,37 @@ export default {
     "미국·영국·호주·캐나다 수출. 속도·MOQ·품질관리를 중시하는 DTC 창업자와 함께 성장합니다.",
   "social.partnerLogos": "협력 브랜드 (일부)",
 
+  "brand.dialog.open": "브랜드 소개 보기",
+  "brand.dialog.close": "닫기",
+  "brand.battle.name": "Battle Sports",
+  "brand.battle.category": "미식축구 의류·유니폼 · 미국",
+  "brand.battle.bio":
+    "Battle Sports(Battle Uniforms)는 유소년·7v7·고교 등을 위한 미식축구 의류, 보호장비, 맞춤 팀 유니폼, 트레이닝웨어를 제공하는 미국 브랜드입니다.",
+  "brand.bobby-jones.name": "Bobby Jones",
+  "brand.bobby-jones.category": "프리미엄 골프 라이프스타일 · 미국",
+  "brand.bobby-jones.bio":
+    "1989년 출시된 Bobby Jones는 골프 전설을 기리는 브랜드로, 절제된 컨트리클럽 스타일의 폴로, 니트, 아우터 등 남녀 골프·라이프스타일 의류를 선보입니다.",
+  "brand.costco.name": "Costco Wholesale",
+  "brand.costco.category": "회원제 창고형 유통 · 미국",
+  "brand.costco.bio":
+    "Costco Wholesale는 미국 대표 회원제 창고매장입니다. Kirkland Signature 및 벤더 의류는 안정적 대량 생산, 품질, 컴플라이언스가 핵심 요구사항입니다.",
+  "brand.ecko.name": "Ecko Unltd.",
+  "brand.ecko.category": "스트리트웨어 · 미국",
+  "brand.ecko.bio":
+    "1993년 Marc Ecko가 설립한 브랜드로, 코뿔소 로고와 그래피티·힙합·스케이트 문화를 반영한 스트리트 의류 및 액세서리를 전 세계에 판매합니다.",
+  "brand.salt-life.name": "Salt Life",
+  "brand.salt-life.category": "코스털 라이프스타일 · 미국",
+  "brand.salt-life.bio":
+    "2003년 플로리다에서 시작된 Salt Life는 낚시, 서핑, 다이빙, 해변 라이프를 지향하며 해양 환경에 맞는 기능성과 캐주얼 스타일을 결합합니다.",
+  "brand.sunice.name": "Sunice",
+  "brand.sunice.category": "퍼포먼스 아우터 · 캐나다",
+  "brand.sunice.bio":
+    "1976년 설립된 캐나다 브랜드로, 스키 테크니컬 웨어에서 골프 방풍·방수 레이어링까지 확장했으며 올림픽 등에서도 신뢰받는 통기성과 경량감이 특징입니다.",
+  "brand.tommy.name": "Tommy Hilfiger",
+  "brand.tommy.category": "아메리칸 라이프스타일 · 글로벌",
+  "brand.tommy.bio":
+    "1985년 설립, PVH 산하. 레드·화이트·블루의 클래식 프렙 스타일로 스포츠웨어, 데님, 키즈, 액세서리를 100개국 이상에서 운영하는 글로벌 브랜드입니다.",
+
   "cert.eyebrow": "신뢰 지표",
   "cert.iso": "품질경영시스템",
   "cert.bsci": "사회적 책임 감사",

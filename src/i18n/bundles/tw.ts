@@ -36,6 +36,37 @@ export default {
     "產品出口美國、英國、澳洲、加拿大，並與重視交期、MOQ 與品控的 DTC 創辦人共同成長。",
   "social.partnerLogos": "部分合作品牌",
 
+  "brand.dialog.open": "查看品牌簡介",
+  "brand.dialog.close": "關閉",
+  "brand.battle.name": "Battle Sports",
+  "brand.battle.category": "美式足球服飾與隊服 · 美國",
+  "brand.battle.bio":
+    "Battle Sports（Battle Uniforms）專注美式足球運動服飾、護具與定制隊服，覆蓋青少年、7v7 至高校等層級，提供昇華印花球衣、訓練服及團隊商店等整隊裝備方案。",
+  "brand.bobby-jones.name": "Bobby Jones",
+  "brand.bobby-jones.category": "高端高爾夫生活方式 · 美國",
+  "brand.bobby-jones.bio":
+    "Bobby Jones 品牌自 1989 年創立，致敬高爾夫傳奇 Bobby Jones，以低調優雅的俱樂部風格呈現男女性能 Polo、針織、外套及生活方式單品，兼顧球場與日常穿著。",
+  "brand.costco.name": "Costco Wholesale",
+  "brand.costco.category": "倉儲式會員零售 · 美國",
+  "brand.costco.bio":
+    "Costco Wholesale 是美國領先的倉儲會員賣場，服裝項目涵蓋 Kirkland Signature 及供應商系列，對運動休閒與基礎款提出穩定大批量、合規與社會責任等嚴格要求。",
+  "brand.ecko.name": "Ecko Unltd.",
+  "brand.ecko.category": "街頭潮流 · 美國",
+  "brand.ecko.bio":
+    "Ecko Unltd. 由 Marc Ecko 於 1993 年在美國創立，以犀牛標誌聞名，融合塗鴉、嘻哈與滑板文化的街頭服飾品牌，覆蓋男女童運動休閒服及配飾。",
+  "brand.salt-life.name": "Salt Life",
+  "brand.salt-life.category": "海岸生活方式 · 美國",
+  "brand.salt-life.bio":
+    "Salt Life 2003 年誕生於佛羅里達，面向釣魚、衝浪、潛水與海灘生活，將海水環境下的功能性與日常海岸休閒風格結合，延伸至服飾與戶外生活方式產品。",
+  "brand.sunice.name": "Sunice",
+  "brand.sunice.category": "高性能外套 · 加拿大",
+  "brand.sunice.bio":
+    "Sunice 是 1976 年創立的加拿大品牌，從滑雪技術面料起家，發展高爾夫防風雨層搭系統，曾服務冬奧等國際賽事，以透氣、防風、輕量著稱。",
+  "brand.tommy.name": "Tommy Hilfiger",
+  "brand.tommy.category": "美式休閒時尚 · 全球",
+  "brand.tommy.bio":
+    "Tommy Hilfiger 創立於 1985 年，隸屬 PVH 集團，以經典美式學院風紅白藍標識聞名，覆蓋男女童裝、丹寧、配飾等，業務遍及全球一百多個國家和地區。",
+
   "cert.eyebrow": "信任背書",
   "cert.iso": "品質管理體系",
   "cert.bsci": "社會責任稽核",

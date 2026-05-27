@@ -35,6 +35,37 @@ export default {
     "Exporting to USA, UK, Australia, and Canada — growing with DTC founders who care about speed, MOQ, and QC.",
   "social.partnerLogos": "Selected brand partners",
 
+  "brand.dialog.open": "View brand profile",
+  "brand.dialog.close": "Close",
+  "brand.battle.name": "Battle Sports",
+  "brand.battle.category": "Football & team uniforms · United States",
+  "brand.battle.bio":
+    "Battle Sports (Battle Uniforms) is a U.S. brand for football apparel, protective gear, and custom team uniforms—from youth and 7v7 to high school and beyond—with sublimated jerseys, training wear, and team-store programs.",
+  "brand.bobby-jones.name": "Bobby Jones",
+  "brand.bobby-jones.category": "Premium golf lifestyle · United States",
+  "brand.bobby-jones.bio":
+    "Launched in 1989, Bobby Jones honors golf legend Bobby Jones with understated country-club style—performance polos, sweaters, outerwear, and lifestyle pieces for men and women on and off the course.",
+  "brand.costco.name": "Costco Wholesale",
+  "brand.costco.category": "Membership retail · United States",
+  "brand.costco.bio":
+    "Costco Wholesale is a leading U.S. warehouse club operator. Apparel programs—including Kirkland Signature and vendor lines—demand consistent quality, scale production, and strict compliance for activewear and basics.",
+  "brand.ecko.name": "Ecko Unltd.",
+  "brand.ecko.category": "Streetwear · United States",
+  "brand.ecko.bio":
+    "Founded in 1993 by Marc Ecko, Ecko Unltd. is known for its rhino logo and graffiti-rooted streetwear tied to hip-hop and skate culture, with men's, women's, and youth apparel and accessories sold worldwide.",
+  "brand.salt-life.name": "Salt Life",
+  "brand.salt-life.category": "Coastal lifestyle · United States",
+  "brand.salt-life.bio":
+    "Born in 2003 in Jacksonville Beach, Florida, Salt Life celebrates fishing, surf, dive, and beach living—combining saltwater-ready function with casual coastal style in apparel and outdoor lifestyle goods.",
+  "brand.sunice.name": "Sunice",
+  "brand.sunice.category": "Performance outerwear · Canada",
+  "brand.sunice.bio":
+    "Since 1976, Canadian brand Sunice has built technical ski and golf outerwear with layered weather protection—trusted by Olympians, resort players, and PGA/LPGA pros for breathable, wind-resistant kit.",
+  "brand.tommy.name": "Tommy Hilfiger",
+  "brand.tommy.category": "American lifestyle fashion · Global",
+  "brand.tommy.bio":
+    "Founded in 1985 and part of PVH Corp., Tommy Hilfiger delivers classic American prep—sportswear, denim, kids, and accessories—in more than 100 countries with its signature red, white, and blue identity.",
+
   "cert.eyebrow": "Trust signals",
   "cert.iso": "Quality management system",
   "cert.bsci": "Social compliance audit",

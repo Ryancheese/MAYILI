@@ -35,6 +35,37 @@ export default {
     "米国・英国・オーストラリア・カナダへ輸出。スピード、MOQ、品質管理を重視するDTCブランドとともに成長しています。",
   "social.partnerLogos": "提携ブランド（一部）",
 
+  "brand.dialog.open": "ブランド概要を見る",
+  "brand.dialog.close": "閉じる",
+  "brand.battle.name": "Battle Sports",
+  "brand.battle.category": "アメリカンフットボール・アパレル · アメリカ",
+  "brand.battle.bio":
+    "Battle Sports（Battle Uniforms）は、ユースから7v7、高校生までを対象に、フットボール用アパレル、プロテクション、カスタムチームユニフォーム、トレーニングウェアを展開する米国ブランドです。",
+  "brand.bobby-jones.name": "Bobby Jones",
+  "brand.bobby-jones.category": "プレミアムゴルフライフスタイル · アメリカ",
+  "brand.bobby-jones.bio":
+    "1989年誕生のBobby Jonesは、ゴルフの伝説ボビー・ジョーンズに敬意を表したブランド。上品なカントリークラブスタイルのポロ、ニット、アウターなどを男女向けに展開します。",
+  "brand.costco.name": "Costco Wholesale",
+  "brand.costco.category": "会員制倉庫型小売 · アメリカ",
+  "brand.costco.bio":
+    "Costco Wholesaleは米国を代表する会員制倉庫店。Kirkland Signatureやベンダー向けアパレルでは、安定した大量生産、品質、コンプライアンスが求められます。",
+  "brand.ecko.name": "Ecko Unltd.",
+  "brand.ecko.category": "ストリートウェア · アメリカ",
+  "brand.ecko.bio":
+    "1993年Marc Eckoにより創業。サイのロゴで知られるストリートブランドで、グラフィティ、ヒップホップ、スケート文化を反映したアパレルとアクセサリーを展開します。",
+  "brand.salt-life.name": "Salt Life",
+  "brand.salt-life.category": "コーストライフスタイル · アメリカ",
+  "brand.salt-life.bio":
+    "2003年フロリダで誕生。釣り、サーフ、ダイビング、ビーチライフを象徴し、海での機能性とリラックスした海岸カジュアルを融合したアパレルブランドです。",
+  "brand.sunice.name": "Sunice",
+  "brand.sunice.category": "パフォーマンスアウター · カナダ",
+  "brand.sunice.bio":
+    "1976年創業のカナダブランド。スキー用テクニカルウェアからゴルフの防風・防雨レイヤーへ拡大し、オリンピックなどでも採用された通気性と軽量性が特徴です。",
+  "brand.tommy.name": "Tommy Hilfiger",
+  "brand.tommy.category": "アメリカンライフスタイル · グローバル",
+  "brand.tommy.bio":
+    "1985年創業、PVH傘下。赤・白・青のクラシックなプレップスタイルで、スポーツウェア、デニム、キッズ、アクセサリーを100カ国以上で展開するグローバルブランドです。",
+
   "cert.eyebrow": "信頼の根拠",
   "cert.iso": "品質マネジメント",
   "cert.bsci": "社会的責任監査",
