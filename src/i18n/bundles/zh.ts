@@ -34,6 +34,7 @@ export default {
   "social.line1Sub": "运动休闲与性能服饰长期合作供应商",
   "social.line2":
     "产品出口美国、英国、澳大利亚、加拿大，并与重视交期、MOQ 与品控的 DTC 创始人共同成长。",
+  "social.partnerLogos": "部分合作品牌",
 
   "cert.eyebrow": "信任背书",
   "cert.iso": "质量管理体系",

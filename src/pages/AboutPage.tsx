@@ -3,6 +3,7 @@ import { PageHero } from "../components/PageHero";
 import { FounderStory } from "../components/FounderStory";
 import { FactoryImg } from "../components/FactoryImg";
 import { PHOTO } from "../lib/images";
+import { BrandLogoStrip } from "../components/BrandLogoStrip";
 import { Reveal } from "../components/Reveal";
 import { useI18n } from "../i18n/context";
 
@@ -40,6 +41,9 @@ export function AboutPage() {
             </article>
           ))}
         </div>
+        <Reveal>
+          <BrandLogoStrip variant="light" />
+        </Reveal>
       </section>
       <section className="section page-values">
         <div className="section-heading">

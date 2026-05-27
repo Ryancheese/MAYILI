@@ -9,6 +9,14 @@
   --blue: #1f65d6;
   --red: #d23f31;
   --green: #677b50;
+  --warm-ink: #2a2218;
+  --warm-cream: #f7f0e4;
+  --warm-panel: #faf6f0;
+  --warm-line: #e0d5c4;
+  --warm-deep: #3d342c;
+  --warm-card-dark: #2f2822;
+  --warm-shadow: 0 8px 28px rgba(58, 42, 28, 0.14);
+  --warm-shadow-deep: 0 10px 32px rgba(20, 14, 8, 0.28);
   --shadow: 0 24px 80px rgba(17, 19, 21, 0.14);
   --radius: 8px;
   --photo-radius: var(--radius);
@@ -456,15 +464,12 @@ h3 {
 }
 
 .social-proof {
-  background: #0f1216;
-  color: #fff;
+  background: transparent;
+  color: var(--ink);
 }
 
 .social-inner {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius);
-  padding: clamp(18px, 3vw, 26px);
-  background: rgba(255, 255, 255, 0.04);
+  padding: 0;
 }
 
 .social-line {
@@ -479,15 +484,76 @@ h3 {
 .social-sub {
   display: block;
   margin-top: 8px;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   font-size: 14px;
   font-weight: 650;
 }
 
 .social-line.muted {
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
   font-size: 15px;
+}
+
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3.5vw, 36px);
+  margin: 24px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--warm-line);
+  list-style: none;
+}
+
+.brand-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(96px, 14vw, 132px);
+  min-height: 52px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--warm-line);
+  background-color: var(--warm-cream);
+  box-shadow: var(--warm-shadow);
+}
+
+.brand-logo-frame--dark {
+  background-color: var(--warm-card-dark);
+  border-color: rgba(58, 42, 28, 0.35);
+  box-shadow: var(--warm-shadow-deep);
+}
+
+.brand-logos img {
+  display: block;
+  max-height: 32px;
+  max-width: clamp(80px, 12vw, 128px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.brand-logos li:hover .brand-logo-frame:not(.brand-logo-frame--dark) {
+  border-color: #d4c4a8;
+}
+
+.brand-logos li:hover img {
+  transform: scale(1.03);
+}
+
+.brand-logos--light {
+  margin-top: clamp(28px, 4vw, 40px);
+  padding-top: 0;
+  border-top: none;
 }
 
 .certs {

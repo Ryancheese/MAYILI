@@ -33,6 +33,7 @@ export default {
   "social.line1Sub": "スポーツ・パフォーマンスウェアの長期パートナー",
   "social.line2":
     "米国・英国・オーストラリア・カナダへ輸出。スピード、MOQ、品質管理を重視するDTCブランドとともに成長しています。",
+  "social.partnerLogos": "提携ブランド（一部）",
 
   "cert.eyebrow": "信頼の根拠",
   "cert.iso": "品質マネジメント",

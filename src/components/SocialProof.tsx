@@ -1,4 +1,5 @@
 import { useI18n } from "../i18n/context";
+import { BrandLogoStrip } from "./BrandLogoStrip";
 import { Reveal } from "./Reveal";
 
 export function SocialProof() {
@@ -12,6 +13,7 @@ export function SocialProof() {
             <span className="social-sub">{t("social.line1Sub")}</span>
           </p>
           <p className="social-line muted">{t("social.line2")}</p>
+          <BrandLogoStrip variant="dark" />
         </div>
       </Reveal>
     </section>

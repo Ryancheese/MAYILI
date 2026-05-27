@@ -33,6 +33,7 @@ export default {
   "social.line1Sub": "Long-term partner for sportswear & performance apparel",
   "social.line2":
     "Exporting to USA, UK, Australia, and Canada — growing with DTC founders who care about speed, MOQ, and QC.",
+  "social.partnerLogos": "Selected brand partners",
 
   "cert.eyebrow": "Trust signals",
   "cert.iso": "Quality management system",

@@ -33,6 +33,7 @@ export default {
   "social.line1Sub": "스포츠·퍼포먼스 의류 장기 파트너",
   "social.line2":
     "미국·영국·호주·캐나다 수출. 속도·MOQ·품질관리를 중시하는 DTC 창업자와 함께 성장합니다.",
+  "social.partnerLogos": "협력 브랜드 (일부)",
 
   "cert.eyebrow": "신뢰 지표",
   "cert.iso": "품질경영시스템",
