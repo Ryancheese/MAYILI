@@ -35,8 +35,44 @@ export default {
     "米国・英国・オーストラリア・カナダへ輸出。スピード、MOQ、品質管理を重視するDTCブランドとともに成長しています。",
   "social.partnerLogos": "提携ブランド（一部）",
 
+  "brand.wall.title": "合作品牌",
+  "brand.wall.subtitle": "Product Brands",
+  "brand.wall.flipHint": "プロフィールを開いています…",
+
   "brand.dialog.open": "ブランド概要を見る",
   "brand.dialog.close": "閉じる",
+  "brand.machine.name": "Machine",
+  "brand.machine.category": "パフォーマンスライフスタイル · ニューヨーク",
+  "brand.machine.bio":
+    "1999年ニューヨーク創業のMachine Clothing Company。フィットネス、モーターカルチャー、トラベル向けのメンズ機能カジュアル（ジョガー、シェル、トレーニングトップ）を展開。",
+  "brand.planet.name": "Planet",
+  "brand.planet.category": "スケートアパレル · アメリカ",
+  "brand.planet.bio":
+    "Chris Millerが立ち上げたPlanet Earthは、スケートカルチャーとアパレルを結びつけた老舗ブランド。ストリートウェアを中心に北米で展開。",
+  "brand.brooklyn.name": "Brooklyn",
+  "brand.brooklyn.category": "NYCストリートライン · アメリカ",
+  "brand.brooklyn.bio":
+    "BrooklynラインはNYのストリート文化をフーディ、ジップジャケット、グラフィックで表現するMachineファミリーの都市ライフスタイル柱。",
+  "brand.academy.name": "Academy",
+  "brand.academy.category": "Planet Brooklyn Academy · アメリカ",
+  "brand.academy.bio":
+    "Planet Brooklyn Academy（PBA）はブルックリンのクリエイティブ文化とMachineのコラボで、ストリートデザインと機能素材を融合したアパレルを展開。",
+  "brand.matix.name": "Matix",
+  "brand.matix.category": "カリフォルニアスケート · アメリカ",
+  "brand.matix.bio":
+    "1998年Daewon Songらにより創業。控えめなプリントとカリフォルニアのスケート・アウトドアライフスタイルを体現するカジュアルブランド。",
+  "brand.marc.name": "Marc",
+  "brand.marc.category": "デザイナーライン · アメリカ",
+  "brand.marc.bio":
+    "MarcはMarc Ecko系のデザイナー主導ライン。ストリートDNAを保ちつつ、より洗練されたカットと素材へ進化したカジュアルウェア。",
+  "brand.cut-and-sew.name": "Cut & Sew",
+  "brand.cut-and-sew.category": "カット＆ソー · アメリカ",
+  "brand.cut-and-sew.bio":
+    "Cut & Sewはパターン、縫製、素材バランスを重視した構築的なニット・ウーブン開発。フーディ、ジャケット、パンツに最適。",
+  "brand.m71.name": "M71",
+  "brand.m71.category": "Machineプレミアムライン · アメリカ",
+  "brand.m71.bio":
+    "2008年開始のMachineプレミアムラインM71。アウター、ジョガー、シェルパなど、モータースポーツ感のある都市パフォーマンススタイル。",
   "brand.battle.name": "Battle Sports",
   "brand.battle.category": "アメリカンフットボール・アパレル · アメリカ",
   "brand.battle.bio":

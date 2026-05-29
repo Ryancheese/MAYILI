@@ -1,75 +1,88 @@
-import { useState } from "react";
-import type { BrandLogo } from "../lib/brandLogos";
+import { useReducedMotion } from "framer-motion";
+import { useCallback, useState } from "react";
 import { BRAND_LOGOS } from "../lib/brandLogos";
 import { useI18n } from "../i18n/context";
 import { BrandLogoDialog } from "./BrandLogoDialog";
 
 type BrandLogoStripProps = {
-  variant?: "dark" | "light";
+  variant?: "wall" | "light";
 };
 
-function BrandLogoGroup({
-  brands,
-  onSelect,
-  ariaHidden,
-  keyPrefix,
-}: {
-  brands: readonly BrandLogo[];
-  onSelect: (index: number) => void;
-  ariaHidden?: boolean;
-  keyPrefix?: string;
-}) {
+export function BrandLogoStrip({ variant = "wall" }: BrandLogoStripProps) {
   const { t } = useI18n();
-
-  return (
-    <ul className="brand-logos-group" aria-hidden={ariaHidden || undefined}>
-      {brands.map((brand, index) => (
-        <li key={keyPrefix ? `${keyPrefix}-${brand.id}` : brand.id}>
-          <button
-            type="button"
-            className={
-              brand.frameDark
-                ? "brand-logo-frame brand-logo-frame--dark"
-                : "brand-logo-frame"
-            }
-            aria-label={`${t("brand.dialog.open")}: ${t(`brand.${brand.id}.name`)}`}
-            tabIndex={ariaHidden ? -1 : undefined}
-            onClick={() => onSelect(index)}
-          >
-            <img src={brand.src} alt="" loading="lazy" decoding="async" />
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export function BrandLogoStrip({ variant = "dark" }: BrandLogoStripProps) {
-  const { t } = useI18n();
+  const reduceMotion = useReducedMotion();
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleBrandClick = useCallback(
+    (index: number) => {
+      if (reduceMotion) {
+        setFlippedIndex(index);
+        setOpenIndex(index);
+        return;
+      }
+      setFlippedIndex(index);
+      window.setTimeout(() => setOpenIndex(index), 480);
+    },
+    [reduceMotion],
+  );
+
+  const handleDialogClose = useCallback(() => {
+    setOpenIndex(null);
+    setFlippedIndex(null);
+  }, []);
 
   return (
     <>
-      <div
-        className={`brand-logos-marquee brand-logos--${variant}`}
+      <section
+        className={`brand-wall brand-wall--${variant}`}
         aria-label={t("social.partnerLogos")}
       >
-        <div className="brand-logos-track">
-          <BrandLogoGroup brands={BRAND_LOGOS} onSelect={setOpenIndex} />
-          <BrandLogoGroup
-            brands={BRAND_LOGOS}
-            onSelect={setOpenIndex}
-            ariaHidden
-            keyPrefix="dup"
-          />
-        </div>
-      </div>
+        <header className="brand-wall-heading">
+          <strong>{t("brand.wall.title")}</strong>
+          <span>{t("brand.wall.subtitle")}</span>
+        </header>
+
+        <ul className="brand-wall-grid">
+          {BRAND_LOGOS.map((brand, index) => (
+            <li
+              key={brand.id}
+              className={brand.wallSpan === 2 ? "brand-wall-item--wide" : undefined}
+            >
+              <button
+                type="button"
+                className={[
+                  "brand-wall-cell",
+                  brand.frameDark ? "brand-wall-cell--dark" : "",
+                  flippedIndex === index || openIndex === index ? "is-flipped" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                aria-label={`${t("brand.dialog.open")}: ${t(`brand.${brand.id}.name`)}`}
+                aria-expanded={openIndex === index}
+                onClick={() => handleBrandClick(index)}
+              >
+                <span className="brand-wall-flipper">
+                  <span className="brand-wall-face brand-wall-face--front">
+                    <img src={brand.src} alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span className="brand-wall-face brand-wall-face--back">
+                    <strong>{t(`brand.${brand.id}.name`)}</strong>
+                    <small>{t(`brand.${brand.id}.category`)}</small>
+                    <em>{t("brand.wall.flipHint")}</em>
+                  </span>
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {openIndex !== null && (
         <BrandLogoDialog
           brands={BRAND_LOGOS}
           index={openIndex}
-          onClose={() => setOpenIndex(null)}
+          onClose={handleDialogClose}
           onChange={setOpenIndex}
         />
       )}

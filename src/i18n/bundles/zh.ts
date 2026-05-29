@@ -36,8 +36,44 @@ export default {
     "产品出口美国、英国、澳大利亚、加拿大，并与重视交期、MOQ 与品控的 DTC 创始人共同成长。",
   "social.partnerLogos": "部分合作品牌",
 
+  "brand.wall.title": "合作品牌",
+  "brand.wall.subtitle": "Product Brands",
+  "brand.wall.flipHint": "正在打开简介…",
+
   "brand.dialog.open": "查看品牌简介",
   "brand.dialog.close": "关闭",
+  "brand.machine.name": "Machine",
+  "brand.machine.category": "性能休闲男装 · 美国纽约",
+  "brand.machine.bio":
+    "Machine Clothing Company 1999 年创立于纽约，专注健身、机车文化与旅行场景的功能休闲男装，涵盖慢跑裤、外套、训练上衣等，并长期布局美国主流百货渠道。",
+  "brand.planet.name": "Planet",
+  "brand.planet.category": "滑板服饰 · 美国",
+  "brand.planet.bio":
+    "Planet Earth 由职业滑手 Chris Miller 创立，是滑板圈早期将环保理念与服装结合的代表品牌之一，后聚焦滑板与街头休闲服饰，在北美运动零售渠道具有辨识度。",
+  "brand.brooklyn.name": "Brooklyn",
+  "brand.brooklyn.category": "纽约街头系列 · 美国",
+  "brand.brooklyn.bio":
+    "Brooklyn 系列以纽约街区文化为灵感，呈现卫衣、夹克等都市休闲单品，强调舒适面料与街头图形，是 Machine 品牌矩阵中面向东岸城市生活方式的重要产品线。",
+  "brand.academy.name": "Academy",
+  "brand.academy.category": "Planet Brooklyn Academy · 美国",
+  "brand.academy.bio":
+    "Planet Brooklyn Academy（PBA）扎根布鲁克林创意文化，与 Machine 联合推出兼具街头美学与运动功能的面料单品，覆盖卫衣、长袖性能上衣等，服务社区、音乐与运动跨界场景。",
+  "brand.matix.name": "Matix",
+  "brand.matix.category": "加州滑板休闲 · 美国",
+  "brand.matix.bio":
+    "Matix 由职业滑手 Daewon Song 等人于 1998 年在美国创立，以低调设计与加州滑板、户外生活方式见长，产品涵盖卫衣、法兰绒、外套等男女休闲服饰。",
+  "brand.marc.name": "Marc",
+  "brand.marc.category": "设计师剪裁线 · 美国",
+  "brand.marc.bio":
+    "Marc 指向 Marc Ecko 体系下的设计师支线，强调更成熟的剪裁与面料升级，在街头基因之上延伸商务休闲与精致化单品，服务品牌老化后的风格升级需求。",
+  "brand.cut-and-sew.name": "Cut & Sew",
+  "brand.cut-and-sew.category": "精品缝制 · 美国",
+  "brand.cut-and-sew.bio":
+    "Cut & Sew 代表裁片缝制类高端休闲服饰开发，强调版型、缝迹与面料配比的精细控制，适用于卫衣、夹克、长裤等需要立体剪裁与结构感的订单。",
+  "brand.m71.name": "M71",
+  "brand.m71.category": "Machine 高端线 · 美国",
+  "brand.m71.bio":
+    "M71 为 Machine 于 2008 年推出的高端支线，主打外套、慢跑裤、羊羔绒夹克等，融入运动剪裁与赛车文化元素，定位更精致的都市性能休闲风格。",
   "brand.battle.name": "Battle Sports",
   "brand.battle.category": "美式足球服饰与队服 · 美国",
   "brand.battle.bio":
