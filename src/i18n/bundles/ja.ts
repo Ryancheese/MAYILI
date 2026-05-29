@@ -45,30 +45,18 @@ export default {
   "brand.machine.category": "パフォーマンスライフスタイル · ニューヨーク",
   "brand.machine.bio":
     "1999年ニューヨーク創業のMachine Clothing Company。フィットネス、モーターカルチャー、トラベル向けのメンズ機能カジュアル（ジョガー、シェル、トレーニングトップ）を展開。",
-  "brand.planet.name": "Planet",
-  "brand.planet.category": "スケートアパレル · アメリカ",
-  "brand.planet.bio":
-    "Chris Millerが立ち上げたPlanet Earthは、スケートカルチャーとアパレルを結びつけた老舗ブランド。ストリートウェアを中心に北米で展開。",
-  "brand.brooklyn.name": "Brooklyn",
-  "brand.brooklyn.category": "NYCストリートライン · アメリカ",
-  "brand.brooklyn.bio":
-    "BrooklynラインはNYのストリート文化をフーディ、ジップジャケット、グラフィックで表現するMachineファミリーの都市ライフスタイル柱。",
-  "brand.academy.name": "Academy",
-  "brand.academy.category": "Planet Brooklyn Academy · アメリカ",
-  "brand.academy.bio":
-    "Planet Brooklyn Academy（PBA）はブルックリンのクリエイティブ文化とMachineのコラボで、ストリートデザインと機能素材を融合したアパレルを展開。",
+  "brand.planet-brooklyn-academy.name": "Planet Brooklyn Academy",
+  "brand.planet-brooklyn-academy.category": "ブルックリン・ストリート＆スポーツ · アメリカ",
+  "brand.planet-brooklyn-academy.bio":
+    "Planet Brooklyn Academy（PBA）はMachineブランドファミリー内の独立ライン。ブルックリンのクリエイティブ文化を基盤に、ストリートグラフィックと機能素材を融合したフーディ、ジャケット、トレーニングウェアを展開します。",
   "brand.matix.name": "Matix",
   "brand.matix.category": "カリフォルニアスケート · アメリカ",
   "brand.matix.bio":
     "1998年Daewon Songらにより創業。控えめなプリントとカリフォルニアのスケート・アウトドアライフスタイルを体現するカジュアルブランド。",
-  "brand.marc.name": "Marc",
-  "brand.marc.category": "デザイナーライン · アメリカ",
-  "brand.marc.bio":
-    "MarcはMarc Ecko系のデザイナー主導ライン。ストリートDNAを保ちつつ、より洗練されたカットと素材へ進化したカジュアルウェア。",
-  "brand.cut-and-sew.name": "Cut & Sew",
-  "brand.cut-and-sew.category": "カット＆ソー · アメリカ",
-  "brand.cut-and-sew.bio":
-    "Cut & Sewはパターン、縫製、素材バランスを重視した構築的なニット・ウーブン開発。フーディ、ジャケット、パンツに最適。",
+  "brand.marc-ecko-cut-and-sew.name": "Marc Ecko Cut & Sew",
+  "brand.marc-ecko-cut-and-sew.category": "プレミアムカット＆ソー · アメリカ",
+  "brand.marc-ecko-cut-and-sew.bio":
+    "Marc Ecko Cut & Sew（MECS）はMarc Eckoのプレミアムカット＆ソーブランド。立体パターンと丁寧な縫製で、ストリートのDNAを保ちながらスマートカジュアルへ進化したフーディ、ジャケット、パンツを展開し、Ecko Unltd.メインラインと補完関係にあります。",
   "brand.m71.name": "M71",
   "brand.m71.category": "Machineプレミアムライン · アメリカ",
   "brand.m71.bio":

@@ -571,13 +571,86 @@ h3 {
   }
 }
 
-.brand-wall-grid li {
+.brand-wall-item {
   display: flex;
   min-width: 0;
 }
 
 .brand-wall-item--wide {
   grid-column: span 2;
+}
+
+/* Wall layout: varied sizes while keeping each row filled */
+.brand-wall--wall .brand-wall-grid {
+  grid-auto-flow: dense;
+}
+
+.brand-wall--wall .brand-wall-item--wide {
+  grid-column: auto;
+}
+
+.brand-wall--wall .brand-wall-item--slot-1,
+.brand-wall--wall .brand-wall-item--slot-2,
+.brand-wall--wall .brand-wall-item--slot-8,
+.brand-wall--wall .brand-wall-item--slot-9,
+.brand-wall--wall .brand-wall-item--slot-10,
+.brand-wall--wall .brand-wall-item--slot-11,
+.brand-wall--wall .brand-wall-item--slot-12 {
+  grid-column: span 2;
+}
+
+@media (min-width: 620px) {
+  .brand-wall--wall .brand-wall-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-1,
+  .brand-wall--wall .brand-wall-item--slot-2,
+  .brand-wall--wall .brand-wall-item--slot-3,
+  .brand-wall--wall .brand-wall-item--slot-4,
+  .brand-wall--wall .brand-wall-item--slot-8,
+  .brand-wall--wall .brand-wall-item--slot-9,
+  .brand-wall--wall .brand-wall-item--slot-10 {
+    grid-column: span 4;
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-5,
+  .brand-wall--wall .brand-wall-item--slot-7 {
+    grid-column: span 3;
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-6,
+  .brand-wall--wall .brand-wall-item--slot-11,
+  .brand-wall--wall .brand-wall-item--slot-12 {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .brand-wall--wall .brand-wall-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-1,
+  .brand-wall--wall .brand-wall-item--slot-2,
+  .brand-wall--wall .brand-wall-item--slot-3,
+  .brand-wall--wall .brand-wall-item--slot-8,
+  .brand-wall--wall .brand-wall-item--slot-9,
+  .brand-wall--wall .brand-wall-item--slot-10 {
+    grid-column: span 4;
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-4,
+  .brand-wall--wall .brand-wall-item--slot-5,
+  .brand-wall--wall .brand-wall-item--slot-6,
+  .brand-wall--wall .brand-wall-item--slot-7 {
+    grid-column: span 3;
+  }
+
+  .brand-wall--wall .brand-wall-item--slot-11,
+  .brand-wall--wall .brand-wall-item--slot-12 {
+    grid-column: span 6;
+  }
 }
 
 .brand-wall-cell {

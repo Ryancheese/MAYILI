@@ -45,30 +45,18 @@ export default {
   "brand.machine.category": "Performance lifestyle · New York",
   "brand.machine.bio":
     "Machine Clothing Company was founded in New York in 1999 with men's performance and lifestyle apparel for fitness, motorsport culture, and travel—joggers, shells, and training tops sold through major U.S. retailers.",
-  "brand.planet.name": "Planet",
-  "brand.planet.category": "Skate apparel · United States",
-  "brand.planet.bio":
-    "Planet Earth, created by pro skater Chris Miller, is a legacy skate brand known for eco-minded early apparel and long-running streetwear programs across North American action-sports retail.",
-  "brand.brooklyn.name": "Brooklyn",
-  "brand.brooklyn.category": "NYC street line · United States",
-  "brand.brooklyn.bio":
-    "The Brooklyn line channels New York street culture through hoodies, zip jackets, and graphics—an urban lifestyle pillar within the Machine brand family.",
-  "brand.academy.name": "Academy",
-  "brand.academy.category": "Planet Brooklyn Academy · United States",
-  "brand.academy.bio":
-    "Planet Brooklyn Academy (PBA) celebrates Brooklyn's creative energy through collaborations with Machine—merging street design with performance fabrics in hoodies and training layers.",
+  "brand.planet-brooklyn-academy.name": "Planet Brooklyn Academy",
+  "brand.planet-brooklyn-academy.category": "Brooklyn street & sport · United States",
+  "brand.planet-brooklyn-academy.bio":
+    "Planet Brooklyn Academy (PBA) is a distinct line within the Machine brand family—rooted in Brooklyn's creative culture, blending street graphics with performance fabrics in hoodies, jackets, and training layers for community, music, and sport.",
   "brand.matix.name": "Matix",
   "brand.matix.category": "California skate lifestyle · United States",
   "brand.matix.bio":
     "Founded in 1998 by Daewon Song and partners, Matix is a California skate lifestyle brand known for understated prints, flannels, and outdoor-ready casualwear.",
-  "brand.marc.name": "Marc",
-  "brand.marc.category": "Designer line · United States",
-  "brand.marc.bio":
-    "Marc refers to designer-led extensions within the Marc Ecko universe—elevated cuts and fabrics that evolve street heritage into refined casual and smart-casual apparel.",
-  "brand.cut-and-sew.name": "Cut & Sew",
-  "brand.cut-and-sew.category": "Premium cut-and-sew · United States",
-  "brand.cut-and-sew.bio":
-    "Cut & Sew covers structured knit and woven programs where pattern, stitching, and fabric pairing matter—ideal for hoodies, jackets, and pants that need tailored construction.",
+  "brand.marc-ecko-cut-and-sew.name": "Marc Ecko Cut & Sew",
+  "brand.marc-ecko-cut-and-sew.category": "Premium cut-and-sew · United States",
+  "brand.marc-ecko-cut-and-sew.bio":
+    "Marc Ecko Cut & Sew (MECS) is Marc Ecko's premium cut-and-sew label—structured hoodies, jackets, and pants with refined patterning and stitching that bridge street heritage with smart casual, complementing the Ecko Unltd. mainline.",
   "brand.m71.name": "M71",
   "brand.m71.category": "Machine premium line · United States",
   "brand.m71.bio":

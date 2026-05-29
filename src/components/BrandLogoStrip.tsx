@@ -47,7 +47,13 @@ export function BrandLogoStrip({ variant = "wall" }: BrandLogoStripProps) {
           {BRAND_LOGOS.map((brand, index) => (
             <li
               key={brand.id}
-              className={brand.wallSpan === 2 ? "brand-wall-item--wide" : undefined}
+              className={[
+                "brand-wall-item",
+                brand.wallSpan === 2 ? "brand-wall-item--wide" : "",
+                variant === "wall" ? `brand-wall-item--slot-${(index % 12) + 1}` : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
             >
               <button
                 type="button"

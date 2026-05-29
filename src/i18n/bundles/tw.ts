@@ -46,30 +46,18 @@ export default {
   "brand.machine.category": "性能休閒男裝 · 美國紐約",
   "brand.machine.bio":
     "Machine Clothing Company 1999 年創立於紐約，專注健身、機車文化與旅行場景的功能休閒男裝，涵蓋慢跑褲、外套、訓練上衣等，並長期布局美國主流百貨渠道。",
-  "brand.planet.name": "Planet",
-  "brand.planet.category": "滑板服飾 · 美國",
-  "brand.planet.bio":
-    "Planet Earth 由職業滑手 Chris Miller 創立，是滑板圈早期將環保理念與服裝結合的代表品牌之一，後聚焦滑板與街頭休閒服飾，在北美運動零售渠道具有辨識度。",
-  "brand.brooklyn.name": "Brooklyn",
-  "brand.brooklyn.category": "紐約街頭系列 · 美國",
-  "brand.brooklyn.bio":
-    "Brooklyn 系列以紐約街區文化為靈感，呈現衛衣、夾克等都市休閒單品，強調舒適面料與街頭圖形，是 Machine 品牌矩陣中面向東岸城市生活方式的重要產品線。",
-  "brand.academy.name": "Academy",
-  "brand.academy.category": "Planet Brooklyn Academy · 美國",
-  "brand.academy.bio":
-    "Planet Brooklyn Academy（PBA）扎根布魯克林創意文化，與 Machine 聯合推出兼具街頭美學與運動功能的面料單品，覆蓋衛衣、長袖性能上衣等，服務社區、音樂與運動跨界場景。",
+  "brand.planet-brooklyn-academy.name": "Planet Brooklyn Academy",
+  "brand.planet-brooklyn-academy.category": "布魯克林街頭運動 · 美國",
+  "brand.planet-brooklyn-academy.bio":
+    "Planet Brooklyn Academy（PBA）是 Machine 品牌矩陣中的獨立產品線，扎根布魯克林創意文化，將街區美學與運動功能面料結合，推出衛衣、夾克、長袖性能上衣等單品，服務社區、音樂與運動跨界場景。",
   "brand.matix.name": "Matix",
   "brand.matix.category": "加州滑板休閒 · 美國",
   "brand.matix.bio":
     "Matix 由職業滑手 Daewon Song 等人於 1998 年在美國創立，以低調設計與加州滑板、戶外生活方式見長，產品涵蓋衛衣、法蘭絨、外套等男女休閒服飾。",
-  "brand.marc.name": "Marc",
-  "brand.marc.category": "設計師剪裁線 · 美國",
-  "brand.marc.bio":
-    "Marc 指向 Marc Ecko 體系下的設計師支線，強調更成熟的剪裁與面料升級，在街頭基因之上延伸商務休閒與精緻化單品，服務品牌老化後的風格升級需求。",
-  "brand.cut-and-sew.name": "Cut & Sew",
-  "brand.cut-and-sew.category": "精品縫製 · 美國",
-  "brand.cut-and-sew.bio":
-    "Cut & Sew 代表裁片縫製類高端休閒服飾開發，強調版型、縫跡與面料配比的精細控制，適用於衛衣、夾克、長褲等需要立體剪裁與結構感的訂單。",
+  "brand.marc-ecko-cut-and-sew.name": "Marc Ecko Cut & Sew",
+  "brand.marc-ecko-cut-and-sew.category": "精品裁縫製 · 美國",
+  "brand.marc-ecko-cut-and-sew.bio":
+    "Marc Ecko Cut & Sew（MECS）是 Marc Ecko 旗下的精品裁縫製品牌，以立體剪裁、精細縫跡與面料配比見長，在街頭文化基因之上延伸商務休閒與精緻化衛衣、夾克、長褲等單品，與 Ecko Unltd. 街頭主線形成互補。",
   "brand.m71.name": "M71",
   "brand.m71.category": "Machine 高端線 · 美國",
   "brand.m71.bio":
