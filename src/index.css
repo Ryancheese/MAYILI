@@ -31,10 +31,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   background: var(--paper);
   color: var(--ink);
   font-size: 16px;
@@ -44,6 +46,11 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -89,6 +96,8 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  width: 100%;
+  max-width: 100%;
   padding: 18px clamp(20px, 5vw, 64px);
   color: #fff;
   transition:
@@ -108,41 +117,24 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-width: 230px;
+  flex-shrink: 0;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 2px solid currentColor;
-  border-radius: 6px;
-  font-weight: 900;
-}
-
-.brand strong,
-.brand small {
+.brand-logo {
   display: block;
-  line-height: 1.1;
-}
-
-.brand strong {
-  font-size: 18px;
-  letter-spacing: 0.08em;
-}
-
-.brand small {
-  margin-top: 4px;
-  opacity: 0.72;
-  font-size: 12px;
+  width: auto;
+  height: clamp(34px, 5vw, 44px);
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(12px, 1.6vw, 22px);
+  flex: 1;
+  min-width: 0;
   font-size: 13px;
   white-space: nowrap;
 }
@@ -172,8 +164,8 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
-  margin-left: auto;
-  margin-right: 8px;
+  flex-shrink: 0;
+  margin-left: clamp(8px, 1.5vw, 20px);
 }
 
 .lang-btn {
@@ -408,8 +400,9 @@ h3 {
   bottom: 34px;
   transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   width: min(1120px, calc(100% - 40px));
+  max-width: calc(100% - 40px);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.1);
@@ -496,8 +489,9 @@ h3 {
 }
 
 .brand-wall {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
   padding: clamp(36px, 5vw, 56px) clamp(16px, 4vw, 32px) clamp(44px, 6vw, 64px);
   color: #fff;
   background-color: #2e3238;
@@ -1155,6 +1149,7 @@ h3 {
 
 .tech-marquee {
   overflow: hidden;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #0f1216;
@@ -2048,7 +2043,7 @@ figcaption {
     right: 20px;
     top: 76px;
     display: none;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 18px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -2056,14 +2051,22 @@ figcaption {
     color: var(--ink);
     box-shadow: var(--shadow);
     white-space: normal;
+    max-width: calc(100% - 40px);
   }
 
   .site-header.is-open .nav-links {
     display: grid;
   }
 
+  .nav-links .lang-switch {
+    grid-column: 1 / -1;
+    margin: 4px 0 0;
+    justify-content: center;
+  }
+
   .menu-button {
     display: inline-flex;
+    flex-shrink: 0;
   }
 
   .hero-content {
@@ -2102,15 +2105,18 @@ figcaption {
 
 @media (max-width: 640px) {
   .site-header {
-    padding: 14px 18px;
+    padding: 14px 16px;
+    gap: 10px;
   }
 
   .brand {
     min-width: 0;
+    flex: 1 1 auto;
   }
 
-  .brand small {
-    display: none;
+  .brand-logo {
+    height: 28px;
+    max-width: min(148px, 42vw);
   }
 
   .hero {
@@ -2118,13 +2124,16 @@ figcaption {
   }
 
   .hero-content {
-    width: calc(100% - 32px);
+    width: min(1120px, calc(100% - 32px));
+    max-width: 100%;
     padding: 130px 0 300px;
   }
 
   .hero-metrics {
     bottom: 20px;
-    width: calc(100% - 32px);
+    width: min(1120px, calc(100% - 32px));
+    max-width: calc(100% - 32px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-metrics article {
@@ -2138,7 +2147,30 @@ figcaption {
 
   .section,
   .section-tight {
-    width: calc(100% - 32px);
+    width: min(1180px, calc(100% - 32px));
+    max-width: 100%;
+  }
+
+  .brand-wall {
+    padding-inline: 16px;
+  }
+
+  .brand-wall-grid {
+    gap: 10px;
+  }
+
+  .brand-wall-face {
+    padding-inline: clamp(8px, 2vw, 12px);
+  }
+
+  .brand-wall-face--front img {
+    max-width: min(96px, 100%);
+    max-height: clamp(28px, 4.5vw, 36px);
+  }
+
+  .brand-wall-item--wide .brand-wall-face--front img {
+    max-width: min(140px, 100%);
+    max-height: clamp(30px, 5vw, 40px);
   }
 
   .services,

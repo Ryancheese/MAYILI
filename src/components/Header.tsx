@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+import machineHeaderLogoUrl from "@assets/machine-header-logo.png?url";
 import { useI18n } from "../i18n/context";
 import { LANGS, LANG_LABEL, HTML_LANG } from "../i18n/types";
 
@@ -40,11 +41,14 @@ export function Header() {
   return (
     <header className={`${headerClass}${open ? " is-open" : ""}`}>
       <Link className="brand" to="/" aria-label={t("header.homeAria")}>
-        <span className="brand-mark">M</span>
-        <span>
-          <strong>MACHINE</strong>
-          <small>{t("brand.sub")}</small>
-        </span>
+        <img
+          className="brand-logo"
+          src={machineHeaderLogoUrl}
+          alt=""
+          width={220}
+          height={48}
+          decoding="async"
+        />
       </Link>
       <nav className="nav-links" aria-label={t("header.navAria")}>
         {navLinks.map((l) => (
@@ -57,21 +61,21 @@ export function Header() {
             <span className="nav-primary">{t(l.key)}</span>
           </Link>
         ))}
+        <div className="lang-switch" role="group" aria-label={t("lang.aria")}>
+          {LANGS.map((code) => (
+            <button
+              key={code}
+              type="button"
+              className={`lang-btn${lang === code ? " is-active" : ""}`}
+              onClick={() => setLang(code)}
+              lang={HTML_LANG[code]}
+              aria-pressed={lang === code}
+            >
+              {LANG_LABEL[code]}
+            </button>
+          ))}
+        </div>
       </nav>
-      <div className="lang-switch" role="group" aria-label={t("lang.aria")}>
-        {LANGS.map((code) => (
-          <button
-            key={code}
-            type="button"
-            className={`lang-btn${lang === code ? " is-active" : ""}`}
-            onClick={() => setLang(code)}
-            lang={HTML_LANG[code]}
-            aria-pressed={lang === code}
-          >
-            {LANG_LABEL[code]}
-          </button>
-        ))}
-      </div>
       <motion.button
         className="menu-button"
         type="button"
