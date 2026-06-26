@@ -6,3 +6,15 @@ export type FootnoteId = (typeof FOOTNOTE_IDS)[number];
 export function scrollToFootnoteAnchor(elementId: string) {
   document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+export function goToHomeSection(
+  navigate: (to: string, options?: { state?: { scrollTo: string } }) => void,
+  pathname: string,
+  sectionId: string,
+) {
+  if (pathname === "/") {
+    scrollToFootnoteAnchor(sectionId);
+    return;
+  }
+  navigate("/", { state: { scrollTo: sectionId } });
+}

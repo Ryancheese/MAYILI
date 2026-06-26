@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { PHOTO } from "../lib/images";
+import { goToHomeSection } from "../lib/footnotes";
 import { useI18n } from "../i18n/context";
 import { FactoryImg } from "./FactoryImg";
 
@@ -12,6 +14,8 @@ function heroVideoSrc(): string | undefined {
 export function Hero() {
   const { t } = useI18n();
   const reduce = useReducedMotion();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [videoVisible, setVideoVisible] = useState(Boolean(heroVideoSrc()));
   const src = heroVideoSrc();
 
@@ -83,12 +87,22 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a className="button primary" href="#contact">
+          <Link className="button primary" to="/contact">
             {t("hero.ctaPrimary")}
-          </a>
-          <a className="button ghost" href="#motion">
+          </Link>
+          <Link
+            className="button ghost"
+            to="/"
+            state={{ scrollTo: "motion" }}
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                goToHomeSection(navigate, pathname, "motion");
+              }
+            }}
+          >
             {t("hero.ctaSecondary")}
-          </a>
+          </Link>
         </motion.div>
       </div>
 
