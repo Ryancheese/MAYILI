@@ -13,14 +13,57 @@ import { HTML_LANG, LANGS } from "./types";
 
 const STORAGE_KEY = "mayili-lang";
 
-function readStoredLang(): Lang {
+/** Map a BCP 47 tag (e.g. en-US, zh-TW) to a supported site language. */
+function matchLang(tag: string): Lang | null {
+  const lower = tag.trim().toLowerCase().replace(/_/g, "-");
+  if (!lower) return null;
+
+  const [base, region] = lower.split("-");
+
+  if (base === "zh") {
+    // Traditional: Taiwan, Hong Kong, Macau, or explicit Hant script
+    if (
+      region === "tw" ||
+      region === "hk" ||
+      region === "mo" ||
+      region === "hant" ||
+      lower.includes("-hant")
+    ) {
+      return "tw";
+    }
+    return "zh";
+  }
+  if (base === "en") return "en";
+  if (base === "ja") return "ja";
+  if (base === "ko") return "ko";
+  return null;
+}
+
+/** Prefer navigator.languages order; fall back to navigator.language. */
+function detectDeviceLang(): Lang {
+  if (typeof navigator === "undefined") return "en";
+
+  const candidates: string[] = [];
+  if (Array.isArray(navigator.languages)) {
+    candidates.push(...navigator.languages);
+  }
+  if (navigator.language) candidates.push(navigator.language);
+
+  for (const tag of candidates) {
+    const matched = matchLang(tag);
+    if (matched) return matched;
+  }
+  return "en";
+}
+
+function readInitialLang(): Lang {
   try {
     const s = localStorage.getItem(STORAGE_KEY);
     if (s && LANGS.includes(s as Lang)) return s as Lang;
   } catch {
     /* ignore */
   }
-  return "zh";
+  return detectDeviceLang();
 }
 
 type Ctx = {
@@ -32,7 +75,7 @@ type Ctx = {
 const I18nContext = createContext<Ctx | null>(null);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(readStoredLang);
+  const [lang, setLangState] = useState<Lang>(readInitialLang);
 
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
